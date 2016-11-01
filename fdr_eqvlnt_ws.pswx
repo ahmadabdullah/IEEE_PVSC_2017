@@ -1,0 +1,73 @@
+<workspace name="fdr_eqvlnt_ws" version="4.6.0" crc="41578154">
+  <paramlist name="options">
+    <param name="compile_save_enable" value="false" />
+    <param name="autosave_interval" value="0" />
+    <param name="display_project_file_name" value="false" />
+    <param name="type_conversion_warn" value="1" />
+    <param name="private_env" value="true" />
+    <param name="unit_system_warn" value="1" />
+    <param name="case_sensitivity" value="true" />
+    <param name="ss_limit" value="256" />
+    <param name="MaxRadioCount" value="256" />
+    <param name="cim_compatibility" value="true" />
+    <param name="MaxConcurrentSim" value="32" />
+    <param name="SocketPortBase" value="30000" />
+    <param name="memory_notify" value="256" />
+    <param name="output_empty" value="1" />
+    <param name="output_excess" value="1" />
+    <param name="output_density" value="1" />
+    <param name="waveform_overwrite" value="1" />
+    <param name="snapshot_overwrite" value="1" />
+    <param name="duplicate_messages" value="100" />
+    <param name="runtime_canvas_lock" value="0" />
+  </paramlist>
+  <projects>
+    <project type="library" name="ETRAN" filepath="..\..\Documents\PSCAD\PSCAD Libraries\ETRAN.pslx" />
+    <project type="project" name="Fdr_eqvlnt" filepath=".\Fdr_eqvlnt.pscx" />
+    <project type="project" name="CT1_response" filepath=".\CT1_response.pscx" />
+    <project type="project" name="CT4_response" filepath=".\CT4_response.pscx" />
+    <project type="project" name="CT3" filepath=".\CT3.pscx" />
+    <project type="project" name="CT4" filepath=".\CT4.pscx" />
+    <project type="project" name="CT1" filepath=".\CT1.pscx" />
+    <project type="project" name="CT2" filepath=".\CT2.pscx" />
+    <project type="project" name="CT2_response" filepath=".\CT2_response.pscx" />
+    <project type="project" name="CT3_response" filepath=".\CT3_response.pscx" />
+    <project type="project" name="C1" filepath="..\..\Downloads\TOV Simulations\Benchmark_Final\Benchmark_Final\C1.pscx" />
+  </projects>
+  <simulations>
+    <simulation name="default" dependson="None">
+      <paramlist name="Default">
+        <param name="before_run" value="" />
+        <param name="before_block" value="true" />
+        <param name="after_run" value="" />
+        <param name="after_block" value="true" />
+      </paramlist>
+      <task namespace="CT1" />
+      <task namespace="CT2" />
+      <task namespace="CT3" />
+      <task namespace="CT4" />
+    </simulation>
+    <simulation name="default2" dependson="None">
+      <paramlist name="Default">
+        <param name="before_run" value="" />
+        <param name="before_block" value="true" />
+        <param name="after_run" value="" />
+        <param name="after_block" value="true" />
+      </paramlist>
+      <task namespace="CT1" />
+      <task namespace="CT2" />
+    </simulation>
+    <simulation name="default3" dependson="None">
+      <paramlist name="Default">
+        <param name="before_run" value="" />
+        <param name="before_block" value="true" />
+        <param name="after_run" value="" />
+        <param name="after_block" value="true" />
+      </paramlist>
+      <task namespace="CT1_response" />
+      <task namespace="CT2_response" />
+      <task namespace="CT3_response" />
+      <task namespace="CT4_response" />
+    </simulation>
+  </simulations>
+</workspace>

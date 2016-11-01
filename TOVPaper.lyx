@@ -178,17 +178,18 @@ With more solar photovoltaic (PV) farms coming online around the world,
  special system studies are needed.
  One of these studies is Transient Overvoltage (TOV) study.
  The main purpose of a TOV study is evaluating the capability of the surge
- arresters selected in the preliminary design of the project.
- To assess the capability of surge arresters accurately, a detailed electromagne
-tic transient (EMT) model of the project has to be built.
+ arresters selected in the preliminary design stage of the project.
+ To assess the capability of the surge arresters accurately, a detailed
+ electromagnetic transient (EMT) model of the project has to be built.
  With the detailed EMT model of a large number of inverters included, the
  run time of the model becomes prohibitive even for a single scenario.
  In this paper, we propose a method to systematically reduce the order of
- the EMT model making the model suitable for TOV studies.
+ the EMT model thus making the model suitable for TOV studies at the substation
+ level.
  The reduced order model response is then benchmarked against the response
  of full order model for various TOV scenarios.
- Simulations show identical or near to identical responses between the two
- models.
+ Simulation results show identical or near-to identical agreement between
+ the response of the detailed and the response of reduced order model.
  Additionally, the run time of the proposed reduced model is less than the
  run time of the full order model by a factor of ninety six.
  
@@ -196,6 +197,48 @@ tic transient (EMT) model of the project has to be built.
 
 \begin_layout Section
 Introduction
+\end_layout
+
+\begin_layout Standard
+With the increased penertration of renewable energy into the grid, special
+ sysem studyies are called upon to assess the impact of these project on
+ various aspects of the power system.
+ One of these aspect is evalaution the respince of surge arresrers (SA)
+ within the substaiton.
+ Assemsemt of the adequactu of the sruge arrester to the susbtaion invoves
+ verigiy that the sirge arrester can ride through the TOV event saelt and
+ that the TOV is limited to a resonable value.
+ Histrically, assememt of SA has been done under speicif assuption about
+ the waveform.
+ For example, in converiolnal gas generation and under traditional transperfme
+ connection in unearthed system, it is know thathte sinle line to ground
+ can cause the phase to ground voltage to increase by a factor of 1.73.
+ 
+\end_layout
+
+\begin_layout Standard
+However, due to the nature of the technogoy eing used in reneable energy
+ resources this might not be true.
+ Reneable energy resources are genrally inverter based generation.
+ These inverter incoprte a large number of switches and of various topolgies.This
+ necessates building the reneabble in a EMT type software and assessing
+ the performnace under various scenarios.
+ Running such models in EMT softwares requires long simulatins times.
+ It is thus not always possible to judge the capabioity of an arreser from
+ the project ocofnguration and grounding scheme used.
+ Thus, it is of atmost importance to develop a way to study the responce
+ of surge arrester within the susbtsation.
+ 
+\end_layout
+
+\begin_layout Standard
+Most equivalencing techingqes that equivlent the whole project for study
+ as a whole as part of grid internconnection studyes.
+ In this paper we provide a system way to reduce the order of the solar
+ PV project.
+ Each feeder of the collector system is reduced on its own to a simple generatio
+n resornce and an impedance.
+ Thus the number of the 
 \end_layout
 
 \begin_layout Standard
@@ -207,18 +250,40 @@ This section will introduce the motivation behind the paper, the statement
 
 \begin_layout Section
 Methodology
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Methodology"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-This section will provide a quick overview of the method used.
- It will consists of two parts, the first part how to construct the frequency
- dependent model as well as how to represent the inverter in the model.
- This section will basically be a paraphrasing of the transactions paper
- we used to do our model
+Just as any source can be represent by ints theiven's or norton equivaelet,
+ the inverters withn the solar PV project can be mpdeled as a thevein or
+ a norton source dpeening on the technogy.
+ However, most PV onverter as a current source and as such, norton model
+ would be most suitables.
+ However, since the collecor system is only tunded for a freqeuncy in power
+ flow studyes, the norton resitance is replace by a freqeuncy dpeenet impedance
+ that captures the high freqeucny respince of the ffeder.
+ The PV inverter is represneted as it is whether it is a prooety model or
+ a user defined model.
+ The only change in the PV model is to scale it up.
+ This is shown in the two sections bellow.
+ 
 \end_layout
 
 \begin_layout Subsection
-subsection 
+Frequency Dependent Impedance
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Frequency-Dependent-Impedance"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -226,7 +291,14 @@ This will be about the frequency dependent model
 \end_layout
 
 \begin_layout Subsection
-another subsection
+Inverter model
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Solar-PV-model"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -283,10 +355,34 @@ In this section I will provide the results of the reduced order model and
 
 \begin_layout Section
 Conclusions
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Conclusions"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-This section will provide conclusions and future work.
+In this paper a systematic way of reducing the order of solar PV farms has
+ been presented.
+ THe method is hsown to cature accuratly the response of the system under
+ various transinet scenarios that may happen in in the susbstaion.
+ THe method is shown to be much faster that the full order model which makes
+ is useful in analyzing a large number of scneatios without the need for
+ a highly cpaply computer.
+ 
+\end_layout
+
+\begin_layout Standard
+THe analysis in this paper is only limited to the SA in the substaion.
+ IF the feeder have SA at the ends of the collector system- as usually the
+ case- the method here will not be applicable but another method need to
+ be used to study those arreaster.
+ Theortically speaking hte SA in the substaion are the ones that are under
+ the most severe duty, and if those arresters pass the evalaution, then
+ all other SA in the susbtsaiton should be safe as well.
  
 \end_layout
 

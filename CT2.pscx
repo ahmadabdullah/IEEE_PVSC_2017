@@ -1,0 +1,2164 @@
+<project name="CT2" version="4.6.0" schema="" Target="EMTDC" sealed="false">
+  <paramlist name="Settings">
+    <param name="creator" value="habdullah,1477499781" />
+    <param name="time_duration" value="0.5" />
+    <param name="time_step" value="50" />
+    <param name="sample_step" value="250" />
+    <param name="chatter_threshold" value=".001" />
+    <param name="branch_threshold" value=".0005" />
+    <param name="StartType" value="0" />
+    <param name="PlotType" value="0" />
+    <param name="output_filename" value="$(Namespace).out" />
+    <param name="SnapType" value="0" />
+    <param name="SnapTime" value="0.3" />
+    <param name="snapshot_filename" value="$(Namespace).snp" />
+    <param name="MrunType" value="0" />
+    <param name="Mruns" value="1" />
+    <param name="Scenario" value="" />
+    <param name="Advanced" value="2047" />
+    <param name="Options" value="16" />
+    <param name="Build" value="18" />
+    <param name="Warn" value="0" />
+    <param name="Check" value="0" />
+    <param name="description" value="" />
+    <param name="revisor" value="habdullah, 1477871512" />
+  </paramlist>
+  <paramlist name="Libs" />
+  <hierarchy>
+    <call name="Station" link="1533858580" z="-1" instance="0" view="false">
+      <call name="Main" link="383691404" z="-1" instance="0" view="true" />
+    </call>
+  </hierarchy>
+  <Layers />
+  <definitions>
+    <Definition classid="StationDefn" name="Station" id="389030434" group="" url="" version="" build="" crc="44293786" view="false" date="1477503474">
+      <paramlist name="">
+        <param name="Description" value="" />
+      </paramlist>
+      <schematic classid="StationCanvas">
+        <paramlist>
+          <param name="show_grid" value="0" />
+          <param name="size" value="0" />
+          <param name="orient" value="1" />
+          <param name="show_border" value="0" />
+          <param name="monitor_bus_voltage" value="0" />
+          <param name="show_signal" value="0" />
+          <param name="show_virtual" value="0" />
+          <param name="show_sequence" value="0" />
+          <param name="auto_sequence" value="1" />
+        </paramlist>
+        <Wire classid="WireBranch" id="383691404" name="STUB" x="180" y="180" w="62" h="80" orient="0" defn="(null):STUB" recv="-1" send="-1" back="-1">
+          <vertex x="0" y="0" />
+          <vertex x="0" y="18" />
+          <vertex x="54" y="54" />
+          <vertex x="54" y="72" />
+          <User classid="UserCmp" name="CT2:Main" id="383691404" x="0" y="0" w="0" h="0" z="-1" orient="0" defn="CT2:Main" link="383691404" q="4">
+            <paramlist link="-1" name="" />
+            <paramlist link="734384092" name="">
+              <param name="xmin" value="0" />
+              <param name="xmax" value="0.6" />
+            </paramlist>
+            <paramlist link="975262838" name="">
+              <param name="ymin" value="-200" />
+              <param name="ymax" value="200" />
+            </paramlist>
+            <paramlist link="1379827671" name="">
+              <param name="xmin" value="0.0" />
+              <param name="xmax" value="1.0" />
+            </paramlist>
+            <paramlist link="939317863" name="">
+              <param name="ymin" value="-1" />
+              <param name="ymax" value="1" />
+            </paramlist>
+            <paramlist link="1271358347" name="">
+              <param name="xmin" value="0.42" />
+              <param name="xmax" value="0.465" />
+            </paramlist>
+            <paramlist link="25166921" name="">
+              <param name="ymin" value="-3" />
+              <param name="ymax" value="3" />
+            </paramlist>
+          </User>
+        </Wire>
+      </schematic>
+    </Definition>
+    <Definition classid="UserCmpDefn" name="Main" id="1766639011" group="" url="" version="" build="" crc="133664395" view="false" date="1477504375">
+      <paramlist name="">
+        <param name="Description" value="" />
+      </paramlist>
+      <form name="" w="320" h="400" splitter="60" />
+      <svg viewBox="-200 -200 200 200" size="2">
+        <rect x="-36" y="-36" width="72" height="72" stroke="Black" stroke-dasharray="none" stroke-width="0.2" fill-style="Hollow" fill-fg="" fill-bg="" />
+        <text x="0" y="0" stroke="Black" fill="Black" font-size="Small"><![CDATA[%:Name]]></text>
+      </svg>
+      <schematic classid="UserCanvas">
+        <paramlist>
+          <param name="show_grid" value="0" />
+          <param name="size" value="2" />
+          <param name="orient" value="1" />
+          <param name="show_border" value="0" />
+          <param name="monitor_bus_voltage" value="0" />
+          <param name="show_signal" value="0" />
+          <param name="show_virtual" value="0" />
+          <param name="show_sequence" value="0" />
+          <param name="auto_sequence" value="1" />
+        </paramlist>
+        <Wire classid="WireOrthogonal" id="740867047" name="" x="126" y="828" w="44" h="8" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="-36" y="0" />
+        </Wire>
+        <User classid="UserCmp" defn="master:phasorimp" id="1863335617" x="36" y="828" w="96" h="96" z="1" orient="0" link="-1" q="4">
+          <paramlist link="-1" name="">
+            <param name="Fmin" value="50 [Hz]" />
+            <param name="Fmax" value="20000 [Hz]" />
+            <param name="FType" value="0" />
+            <param name="Finc" value="10 [Hz]" />
+            <param name="NumF" value="1000" />
+            <param name="FName" value="fdr2.out" />
+            <param name="HType" value="1" />
+            <param name="FUnits" value="0" />
+            <param name="HUnits" value="1" />
+          </paramlist>
+        </User>
+        <Wire classid="WireOrthogonal" id="1662464516" name="" x="2124" y="828" w="116" h="80" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="108" y="0" />
+          <vertex x="108" y="-72" />
+        </Wire>
+        <Wire classid="WireOrthogonal" id="614414680" name="" x="3042" y="1116" w="1070" h="296" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="0" y="-270" />
+          <vertex x="-1062" y="-270" />
+          <vertex x="-1062" y="-288" />
+        </Wire>
+        <Wire classid="WireOrthogonal" id="1868693970" name="" x="1854" y="828" w="908" h="296" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="0" y="72" />
+          <vertex x="900" y="72" />
+          <vertex x="900" y="288" />
+        </Wire>
+        <Wire classid="WireOrthogonal" id="1272528048" name="" x="2466" y="1098" w="746" h="278" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="0" y="-162" />
+          <vertex x="-738" y="-162" />
+          <vertex x="-738" y="-270" />
+        </Wire>
+        <Wire classid="WireOrthogonal" id="1086295003" name="" x="3042" y="1224" w="8" h="26" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="0" y="-18" />
+        </Wire>
+        <User classid="UserCmp" name="master:xfmr-3p2w" id="1741925595" x="3042" y="1152" w="56" h="92" z="1" orient="5" defn="master:xfmr-3p2w" link="-1" q="4">
+          <paramlist link="-1" name="">
+            <param name="Name" value="T32" />
+            <param name="Tmva" value="25.9 [MVA]" />
+            <param name="f" value="60.0 [Hz]" />
+            <param name="YD1" value="0" />
+            <param name="YD2" value="1" />
+            <param name="Lead" value="1" />
+            <param name="Xl" value="0.0578 [pu]" />
+            <param name="Ideal" value="0" />
+            <param name="NLL" value="0.0 [pu]" />
+            <param name="CuL" value="0.0064 [pu]" />
+            <param name="Tap" value="0" />
+            <param name="View" value="1" />
+            <param name="Dtls" value="0" />
+            <param name="V1" value="0.418 [kV]" />
+            <param name="V2" value="34.5 [kV]" />
+            <param name="Enab" value="0" />
+            <param name="Sat" value="1" />
+            <param name="Xair" value="0.2 [pu]" />
+            <param name="Tdc" value="1 [s]" />
+            <param name="Xknee" value="1.25 [pu]" />
+            <param name="Txk" value="0.1 [s]" />
+            <param name="Im1" value="0.4 [%]" />
+            <param name="ILA1" value="" />
+            <param name="ILB1" value="" />
+            <param name="ILC1" value="" />
+            <param name="IAB1" value="Iab1" />
+            <param name="IBC1" value="Ibc1" />
+            <param name="ICA1" value="Ica1" />
+            <param name="ILA2" value="" />
+            <param name="ILB2" value="" />
+            <param name="ILC2" value="" />
+            <param name="IAB2" value="" />
+            <param name="IBC2" value="" />
+            <param name="ICA2" value="" />
+            <param name="IMA" value="" />
+            <param name="IMB" value="" />
+            <param name="IMC" value="" />
+            <param name="FLXA" value="" />
+            <param name="FLXB" value="" />
+            <param name="FLXC" value="" />
+            <param name="IMAB" value="" />
+            <param name="IMBC" value="" />
+            <param name="IMCA" value="" />
+            <param name="FLXAB" value="" />
+            <param name="FLXBC" value="" />
+            <param name="FLXCA" value="" />
+            <param name="Hys" value="0" />
+            <param name="Fremn1" value="0.0" />
+            <param name="Fremn2" value="0.0" />
+            <param name="Fremn3" value="0.0" />
+            <param name="LW2" value="10" />
+            <param name="Bnom" value="1.7" />
+            <param name="material" value="1" />
+            <param name="C" value="0.1" />
+            <param name="K" value="5.0e-5" />
+            <param name="BETA" value="0.96" />
+            <param name="alpha" value="1.325e-5" />
+            <param name="Msat" value="1.72e6" />
+            <param name="F1" value="2730" />
+            <param name="F2" value="3209" />
+            <param name="F3" value="20294" />
+            <param name="Fb" value="2" />
+            <param name="HA1" value="" />
+            <param name="HB1" value="" />
+            <param name="HC1" value="" />
+            <param name="BA1" value="" />
+            <param name="BB1" value="" />
+            <param name="BC1" value="" />
+            <param name="HAB1" value="" />
+            <param name="HBC1" value="" />
+            <param name="HCA1" value="" />
+            <param name="BAB1" value="" />
+            <param name="BBC1" value="" />
+            <param name="BCA1" value="" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:ground" id="560505606" x="2988" y="1170" w="26" h="20" z="0" orient="4" defn="master:ground" link="-1" q="4">
+          <paramlist link="-1" name="" />
+        </User>
+        <Wire classid="WireOrthogonal" id="1736107795" name="" x="2988" y="1170" w="26" h="8" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="18" y="0" />
+        </Wire>
+        <Wire classid="WireOrthogonal" id="488555925" name="" x="2754" y="1224" w="8" h="26" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="0" y="-18" />
+        </Wire>
+        <User classid="UserCmp" name="master:xfmr-3p2w" id="1231767681" x="2754" y="1152" w="56" h="92" z="1" orient="5" defn="master:xfmr-3p2w" link="-1" q="4">
+          <paramlist link="-1" name="">
+            <param name="Name" value="T32" />
+            <param name="Tmva" value="25.9 [MVA]" />
+            <param name="f" value="60.0 [Hz]" />
+            <param name="YD1" value="0" />
+            <param name="YD2" value="1" />
+            <param name="Lead" value="1" />
+            <param name="Xl" value="0.0578 [pu]" />
+            <param name="Ideal" value="0" />
+            <param name="NLL" value="0.0 [pu]" />
+            <param name="CuL" value="0.0064 [pu]" />
+            <param name="Tap" value="0" />
+            <param name="View" value="1" />
+            <param name="Dtls" value="0" />
+            <param name="V1" value="0.418 [kV]" />
+            <param name="V2" value="34.5 [kV]" />
+            <param name="Enab" value="0" />
+            <param name="Sat" value="1" />
+            <param name="Xair" value="0.2 [pu]" />
+            <param name="Tdc" value="1 [s]" />
+            <param name="Xknee" value="1.25 [pu]" />
+            <param name="Txk" value="0.1 [s]" />
+            <param name="Im1" value="0.4 [%]" />
+            <param name="ILA1" value="" />
+            <param name="ILB1" value="" />
+            <param name="ILC1" value="" />
+            <param name="IAB1" value="Iab1" />
+            <param name="IBC1" value="Ibc1" />
+            <param name="ICA1" value="Ica1" />
+            <param name="ILA2" value="" />
+            <param name="ILB2" value="" />
+            <param name="ILC2" value="" />
+            <param name="IAB2" value="" />
+            <param name="IBC2" value="" />
+            <param name="ICA2" value="" />
+            <param name="IMA" value="" />
+            <param name="IMB" value="" />
+            <param name="IMC" value="" />
+            <param name="FLXA" value="" />
+            <param name="FLXB" value="" />
+            <param name="FLXC" value="" />
+            <param name="IMAB" value="" />
+            <param name="IMBC" value="" />
+            <param name="IMCA" value="" />
+            <param name="FLXAB" value="" />
+            <param name="FLXBC" value="" />
+            <param name="FLXCA" value="" />
+            <param name="Hys" value="0" />
+            <param name="Fremn1" value="0.0" />
+            <param name="Fremn2" value="0.0" />
+            <param name="Fremn3" value="0.0" />
+            <param name="LW2" value="10" />
+            <param name="Bnom" value="1.7" />
+            <param name="material" value="1" />
+            <param name="C" value="0.1" />
+            <param name="K" value="5.0e-5" />
+            <param name="BETA" value="0.96" />
+            <param name="alpha" value="1.325e-5" />
+            <param name="Msat" value="1.72e6" />
+            <param name="F1" value="2730" />
+            <param name="F2" value="3209" />
+            <param name="F3" value="20294" />
+            <param name="Fb" value="2" />
+            <param name="HA1" value="" />
+            <param name="HB1" value="" />
+            <param name="HC1" value="" />
+            <param name="BA1" value="" />
+            <param name="BB1" value="" />
+            <param name="BC1" value="" />
+            <param name="HAB1" value="" />
+            <param name="HBC1" value="" />
+            <param name="HCA1" value="" />
+            <param name="BAB1" value="" />
+            <param name="BBC1" value="" />
+            <param name="BCA1" value="" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:ground" id="1508542657" x="2700" y="1170" w="26" h="20" z="0" orient="4" defn="master:ground" link="-1" q="4">
+          <paramlist link="-1" name="" />
+        </User>
+        <Wire classid="WireOrthogonal" id="557771392" name="" x="2700" y="1170" w="26" h="8" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="18" y="0" />
+        </Wire>
+        <Wire classid="WireOrthogonal" id="1047739584" name="" x="2466" y="1206" w="8" h="26" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="0" y="-18" />
+        </Wire>
+        <User classid="UserCmp" name="master:xfmr-3p2w" id="1914219804" x="2466" y="1134" w="56" h="92" z="1" orient="5" defn="master:xfmr-3p2w" link="-1" q="4">
+          <paramlist link="-1" name="">
+            <param name="Name" value="T32" />
+            <param name="Tmva" value="25.9 [MVA]" />
+            <param name="f" value="60.0 [Hz]" />
+            <param name="YD1" value="0" />
+            <param name="YD2" value="1" />
+            <param name="Lead" value="1" />
+            <param name="Xl" value="0.0578 [pu]" />
+            <param name="Ideal" value="0" />
+            <param name="NLL" value="0.0 [pu]" />
+            <param name="CuL" value="0.0064 [pu]" />
+            <param name="Tap" value="0" />
+            <param name="View" value="1" />
+            <param name="Dtls" value="0" />
+            <param name="V1" value="0.418 [kV]" />
+            <param name="V2" value="34.5 [kV]" />
+            <param name="Enab" value="0" />
+            <param name="Sat" value="1" />
+            <param name="Xair" value="0.2 [pu]" />
+            <param name="Tdc" value="1 [s]" />
+            <param name="Xknee" value="1.25 [pu]" />
+            <param name="Txk" value="0.1 [s]" />
+            <param name="Im1" value="0.4 [%]" />
+            <param name="ILA1" value="" />
+            <param name="ILB1" value="" />
+            <param name="ILC1" value="" />
+            <param name="IAB1" value="Iab1" />
+            <param name="IBC1" value="Ibc1" />
+            <param name="ICA1" value="Ica1" />
+            <param name="ILA2" value="" />
+            <param name="ILB2" value="" />
+            <param name="ILC2" value="" />
+            <param name="IAB2" value="" />
+            <param name="IBC2" value="" />
+            <param name="ICA2" value="" />
+            <param name="IMA" value="" />
+            <param name="IMB" value="" />
+            <param name="IMC" value="" />
+            <param name="FLXA" value="" />
+            <param name="FLXB" value="" />
+            <param name="FLXC" value="" />
+            <param name="IMAB" value="" />
+            <param name="IMBC" value="" />
+            <param name="IMCA" value="" />
+            <param name="FLXAB" value="" />
+            <param name="FLXBC" value="" />
+            <param name="FLXCA" value="" />
+            <param name="Hys" value="0" />
+            <param name="Fremn1" value="0.0" />
+            <param name="Fremn2" value="0.0" />
+            <param name="Fremn3" value="0.0" />
+            <param name="LW2" value="10" />
+            <param name="Bnom" value="1.7" />
+            <param name="material" value="1" />
+            <param name="C" value="0.1" />
+            <param name="K" value="5.0e-5" />
+            <param name="BETA" value="0.96" />
+            <param name="alpha" value="1.325e-5" />
+            <param name="Msat" value="1.72e6" />
+            <param name="F1" value="2730" />
+            <param name="F2" value="3209" />
+            <param name="F3" value="20294" />
+            <param name="Fb" value="2" />
+            <param name="HA1" value="" />
+            <param name="HB1" value="" />
+            <param name="HC1" value="" />
+            <param name="BA1" value="" />
+            <param name="BB1" value="" />
+            <param name="BC1" value="" />
+            <param name="HAB1" value="" />
+            <param name="HBC1" value="" />
+            <param name="HCA1" value="" />
+            <param name="BAB1" value="" />
+            <param name="BBC1" value="" />
+            <param name="BCA1" value="" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:ground" id="864392690" x="2412" y="1152" w="26" h="20" z="0" orient="4" defn="master:ground" link="-1" q="4">
+          <paramlist link="-1" name="" />
+        </User>
+        <Wire classid="WireOrthogonal" id="424653191" name="" x="2412" y="1152" w="26" h="8" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="18" y="0" />
+        </Wire>
+        <Wire classid="WireOrthogonal" id="2032153856" name="" x="2178" y="1116" w="602" h="296" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="0" y="-126" />
+          <vertex x="-576" y="-126" />
+          <vertex x="-576" y="-288" />
+          <vertex x="-594" y="-288" />
+        </Wire>
+        <Wire classid="WireOrthogonal" id="1559514345" name="" x="1908" y="1116" w="494" h="296" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="0" y="-90" />
+          <vertex x="-486" y="-90" />
+          <vertex x="-486" y="-288" />
+        </Wire>
+        <Wire classid="WireOrthogonal" id="1916877477" name="" x="1656" y="1116" w="368" h="296" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="0" y="-54" />
+          <vertex x="-360" y="-54" />
+          <vertex x="-360" y="-288" />
+        </Wire>
+        <Wire classid="WireOrthogonal" id="1047128529" name="" x="1386" y="1116" w="242" h="296" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="-234" y="0" />
+          <vertex x="-234" y="-288" />
+        </Wire>
+        <Wire classid="WireOrthogonal" id="1255216103" name="" x="1116" y="1116" w="116" h="296" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="0" y="-180" />
+          <vertex x="-108" y="-180" />
+          <vertex x="-108" y="-288" />
+        </Wire>
+        <Wire classid="WireOrthogonal" id="172963164" name="" x="846" y="1116" w="8" h="296" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="0" y="-288" />
+        </Wire>
+        <Wire classid="WireOrthogonal" id="1658015272" name="" x="720" y="756" w="260" h="26" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="252" y="0" />
+          <vertex x="252" y="-18" />
+        </Wire>
+        <Wire classid="WireOrthogonal" id="51376712" name="" x="720" y="720" w="116" h="44" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="-108" y="0" />
+          <vertex x="-108" y="36" />
+        </Wire>
+        <Wire classid="WireOrthogonal" id="1749502372" name="" x="450" y="720" w="26" h="62" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="0" y="54" />
+          <vertex x="-18" y="54" />
+        </Wire>
+        <Wire classid="WireOrthogonal" id="883164692" name="" x="198" y="738" w="26" h="44" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="0" y="36" />
+          <vertex x="18" y="36" />
+        </Wire>
+        <Wire classid="WireOrthogonal" id="2101760978" name="" x="2178" y="1224" w="8" h="26" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="0" y="-18" />
+        </Wire>
+        <User classid="UserCmp" name="master:xfmr-3p2w" id="693225991" x="2178" y="1152" w="56" h="92" z="1" orient="5" defn="master:xfmr-3p2w" link="-1" q="4">
+          <paramlist link="-1" name="">
+            <param name="Name" value="T32" />
+            <param name="Tmva" value="25.9 [MVA]" />
+            <param name="f" value="60.0 [Hz]" />
+            <param name="YD1" value="0" />
+            <param name="YD2" value="1" />
+            <param name="Lead" value="1" />
+            <param name="Xl" value="0.0578 [pu]" />
+            <param name="Ideal" value="0" />
+            <param name="NLL" value="0.0 [pu]" />
+            <param name="CuL" value="0.0064 [pu]" />
+            <param name="Tap" value="0" />
+            <param name="View" value="1" />
+            <param name="Dtls" value="0" />
+            <param name="V1" value="0.418 [kV]" />
+            <param name="V2" value="34.5 [kV]" />
+            <param name="Enab" value="0" />
+            <param name="Sat" value="1" />
+            <param name="Xair" value="0.2 [pu]" />
+            <param name="Tdc" value="1 [s]" />
+            <param name="Xknee" value="1.25 [pu]" />
+            <param name="Txk" value="0.1 [s]" />
+            <param name="Im1" value="0.4 [%]" />
+            <param name="ILA1" value="" />
+            <param name="ILB1" value="" />
+            <param name="ILC1" value="" />
+            <param name="IAB1" value="Iab1" />
+            <param name="IBC1" value="Ibc1" />
+            <param name="ICA1" value="Ica1" />
+            <param name="ILA2" value="" />
+            <param name="ILB2" value="" />
+            <param name="ILC2" value="" />
+            <param name="IAB2" value="" />
+            <param name="IBC2" value="" />
+            <param name="ICA2" value="" />
+            <param name="IMA" value="" />
+            <param name="IMB" value="" />
+            <param name="IMC" value="" />
+            <param name="FLXA" value="" />
+            <param name="FLXB" value="" />
+            <param name="FLXC" value="" />
+            <param name="IMAB" value="" />
+            <param name="IMBC" value="" />
+            <param name="IMCA" value="" />
+            <param name="FLXAB" value="" />
+            <param name="FLXBC" value="" />
+            <param name="FLXCA" value="" />
+            <param name="Hys" value="0" />
+            <param name="Fremn1" value="0.0" />
+            <param name="Fremn2" value="0.0" />
+            <param name="Fremn3" value="0.0" />
+            <param name="LW2" value="10" />
+            <param name="Bnom" value="1.7" />
+            <param name="material" value="1" />
+            <param name="C" value="0.1" />
+            <param name="K" value="5.0e-5" />
+            <param name="BETA" value="0.96" />
+            <param name="alpha" value="1.325e-5" />
+            <param name="Msat" value="1.72e6" />
+            <param name="F1" value="2730" />
+            <param name="F2" value="3209" />
+            <param name="F3" value="20294" />
+            <param name="Fb" value="2" />
+            <param name="HA1" value="" />
+            <param name="HB1" value="" />
+            <param name="HC1" value="" />
+            <param name="BA1" value="" />
+            <param name="BB1" value="" />
+            <param name="BC1" value="" />
+            <param name="HAB1" value="" />
+            <param name="HBC1" value="" />
+            <param name="HCA1" value="" />
+            <param name="BAB1" value="" />
+            <param name="BBC1" value="" />
+            <param name="BCA1" value="" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:ground" id="289004691" x="2124" y="1170" w="26" h="20" z="0" orient="4" defn="master:ground" link="-1" q="4">
+          <paramlist link="-1" name="" />
+        </User>
+        <Wire classid="WireOrthogonal" id="1804510353" name="" x="2124" y="1170" w="26" h="8" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="18" y="0" />
+        </Wire>
+        <Wire classid="WireOrthogonal" id="622679695" name="" x="1908" y="1224" w="8" h="26" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="0" y="-18" />
+        </Wire>
+        <User classid="UserCmp" name="master:xfmr-3p2w" id="1361919453" x="1908" y="1152" w="56" h="92" z="1" orient="5" defn="master:xfmr-3p2w" link="-1" q="4">
+          <paramlist link="-1" name="">
+            <param name="Name" value="T32" />
+            <param name="Tmva" value="25.9 [MVA]" />
+            <param name="f" value="60.0 [Hz]" />
+            <param name="YD1" value="0" />
+            <param name="YD2" value="1" />
+            <param name="Lead" value="1" />
+            <param name="Xl" value="0.0578 [pu]" />
+            <param name="Ideal" value="0" />
+            <param name="NLL" value="0.0 [pu]" />
+            <param name="CuL" value="0.0064 [pu]" />
+            <param name="Tap" value="0" />
+            <param name="View" value="1" />
+            <param name="Dtls" value="0" />
+            <param name="V1" value="0.418 [kV]" />
+            <param name="V2" value="34.5 [kV]" />
+            <param name="Enab" value="0" />
+            <param name="Sat" value="1" />
+            <param name="Xair" value="0.2 [pu]" />
+            <param name="Tdc" value="1 [s]" />
+            <param name="Xknee" value="1.25 [pu]" />
+            <param name="Txk" value="0.1 [s]" />
+            <param name="Im1" value="0.4 [%]" />
+            <param name="ILA1" value="" />
+            <param name="ILB1" value="" />
+            <param name="ILC1" value="" />
+            <param name="IAB1" value="Iab1" />
+            <param name="IBC1" value="Ibc1" />
+            <param name="ICA1" value="Ica1" />
+            <param name="ILA2" value="" />
+            <param name="ILB2" value="" />
+            <param name="ILC2" value="" />
+            <param name="IAB2" value="" />
+            <param name="IBC2" value="" />
+            <param name="ICA2" value="" />
+            <param name="IMA" value="" />
+            <param name="IMB" value="" />
+            <param name="IMC" value="" />
+            <param name="FLXA" value="" />
+            <param name="FLXB" value="" />
+            <param name="FLXC" value="" />
+            <param name="IMAB" value="" />
+            <param name="IMBC" value="" />
+            <param name="IMCA" value="" />
+            <param name="FLXAB" value="" />
+            <param name="FLXBC" value="" />
+            <param name="FLXCA" value="" />
+            <param name="Hys" value="0" />
+            <param name="Fremn1" value="0.0" />
+            <param name="Fremn2" value="0.0" />
+            <param name="Fremn3" value="0.0" />
+            <param name="LW2" value="10" />
+            <param name="Bnom" value="1.7" />
+            <param name="material" value="1" />
+            <param name="C" value="0.1" />
+            <param name="K" value="5.0e-5" />
+            <param name="BETA" value="0.96" />
+            <param name="alpha" value="1.325e-5" />
+            <param name="Msat" value="1.72e6" />
+            <param name="F1" value="2730" />
+            <param name="F2" value="3209" />
+            <param name="F3" value="20294" />
+            <param name="Fb" value="2" />
+            <param name="HA1" value="" />
+            <param name="HB1" value="" />
+            <param name="HC1" value="" />
+            <param name="BA1" value="" />
+            <param name="BB1" value="" />
+            <param name="BC1" value="" />
+            <param name="HAB1" value="" />
+            <param name="HBC1" value="" />
+            <param name="HCA1" value="" />
+            <param name="BAB1" value="" />
+            <param name="BBC1" value="" />
+            <param name="BCA1" value="" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:ground" id="416377242" x="1854" y="1170" w="26" h="20" z="0" orient="4" defn="master:ground" link="-1" q="4">
+          <paramlist link="-1" name="" />
+        </User>
+        <Wire classid="WireOrthogonal" id="46278593" name="" x="1854" y="1170" w="26" h="8" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="18" y="0" />
+        </Wire>
+        <Wire classid="WireOrthogonal" id="1271660694" name="" x="1656" y="1224" w="8" h="26" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="0" y="-18" />
+        </Wire>
+        <User classid="UserCmp" name="master:xfmr-3p2w" id="1427390609" x="1656" y="1152" w="56" h="92" z="1" orient="5" defn="master:xfmr-3p2w" link="-1" q="4">
+          <paramlist link="-1" name="">
+            <param name="Name" value="T32" />
+            <param name="Tmva" value="25.9 [MVA]" />
+            <param name="f" value="60.0 [Hz]" />
+            <param name="YD1" value="0" />
+            <param name="YD2" value="1" />
+            <param name="Lead" value="1" />
+            <param name="Xl" value="0.0578 [pu]" />
+            <param name="Ideal" value="0" />
+            <param name="NLL" value="0.0 [pu]" />
+            <param name="CuL" value="0.0064 [pu]" />
+            <param name="Tap" value="0" />
+            <param name="View" value="1" />
+            <param name="Dtls" value="0" />
+            <param name="V1" value="0.418 [kV]" />
+            <param name="V2" value="34.5 [kV]" />
+            <param name="Enab" value="0" />
+            <param name="Sat" value="1" />
+            <param name="Xair" value="0.2 [pu]" />
+            <param name="Tdc" value="1 [s]" />
+            <param name="Xknee" value="1.25 [pu]" />
+            <param name="Txk" value="0.1 [s]" />
+            <param name="Im1" value="0.4 [%]" />
+            <param name="ILA1" value="" />
+            <param name="ILB1" value="" />
+            <param name="ILC1" value="" />
+            <param name="IAB1" value="Iab1" />
+            <param name="IBC1" value="Ibc1" />
+            <param name="ICA1" value="Ica1" />
+            <param name="ILA2" value="" />
+            <param name="ILB2" value="" />
+            <param name="ILC2" value="" />
+            <param name="IAB2" value="" />
+            <param name="IBC2" value="" />
+            <param name="ICA2" value="" />
+            <param name="IMA" value="" />
+            <param name="IMB" value="" />
+            <param name="IMC" value="" />
+            <param name="FLXA" value="" />
+            <param name="FLXB" value="" />
+            <param name="FLXC" value="" />
+            <param name="IMAB" value="" />
+            <param name="IMBC" value="" />
+            <param name="IMCA" value="" />
+            <param name="FLXAB" value="" />
+            <param name="FLXBC" value="" />
+            <param name="FLXCA" value="" />
+            <param name="Hys" value="0" />
+            <param name="Fremn1" value="0.0" />
+            <param name="Fremn2" value="0.0" />
+            <param name="Fremn3" value="0.0" />
+            <param name="LW2" value="10" />
+            <param name="Bnom" value="1.7" />
+            <param name="material" value="1" />
+            <param name="C" value="0.1" />
+            <param name="K" value="5.0e-5" />
+            <param name="BETA" value="0.96" />
+            <param name="alpha" value="1.325e-5" />
+            <param name="Msat" value="1.72e6" />
+            <param name="F1" value="2730" />
+            <param name="F2" value="3209" />
+            <param name="F3" value="20294" />
+            <param name="Fb" value="2" />
+            <param name="HA1" value="" />
+            <param name="HB1" value="" />
+            <param name="HC1" value="" />
+            <param name="BA1" value="" />
+            <param name="BB1" value="" />
+            <param name="BC1" value="" />
+            <param name="HAB1" value="" />
+            <param name="HBC1" value="" />
+            <param name="HCA1" value="" />
+            <param name="BAB1" value="" />
+            <param name="BBC1" value="" />
+            <param name="BCA1" value="" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:ground" id="1581995269" x="1602" y="1170" w="26" h="20" z="0" orient="4" defn="master:ground" link="-1" q="4">
+          <paramlist link="-1" name="" />
+        </User>
+        <Wire classid="WireOrthogonal" id="975036127" name="" x="1602" y="1170" w="26" h="8" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="18" y="0" />
+        </Wire>
+        <Wire classid="WireOrthogonal" id="260215866" name="" x="1386" y="1224" w="8" h="26" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="0" y="-18" />
+        </Wire>
+        <User classid="UserCmp" name="master:xfmr-3p2w" id="533722247" x="1386" y="1152" w="56" h="92" z="1" orient="5" defn="master:xfmr-3p2w" link="-1" q="4">
+          <paramlist link="-1" name="">
+            <param name="Name" value="T32" />
+            <param name="Tmva" value="25.9 [MVA]" />
+            <param name="f" value="60.0 [Hz]" />
+            <param name="YD1" value="0" />
+            <param name="YD2" value="1" />
+            <param name="Lead" value="1" />
+            <param name="Xl" value="0.0578 [pu]" />
+            <param name="Ideal" value="0" />
+            <param name="NLL" value="0.0 [pu]" />
+            <param name="CuL" value="0.0064 [pu]" />
+            <param name="Tap" value="0" />
+            <param name="View" value="1" />
+            <param name="Dtls" value="0" />
+            <param name="V1" value="0.418 [kV]" />
+            <param name="V2" value="34.5 [kV]" />
+            <param name="Enab" value="0" />
+            <param name="Sat" value="1" />
+            <param name="Xair" value="0.2 [pu]" />
+            <param name="Tdc" value="1 [s]" />
+            <param name="Xknee" value="1.25 [pu]" />
+            <param name="Txk" value="0.1 [s]" />
+            <param name="Im1" value="0.4 [%]" />
+            <param name="ILA1" value="" />
+            <param name="ILB1" value="" />
+            <param name="ILC1" value="" />
+            <param name="IAB1" value="Iab1" />
+            <param name="IBC1" value="Ibc1" />
+            <param name="ICA1" value="Ica1" />
+            <param name="ILA2" value="" />
+            <param name="ILB2" value="" />
+            <param name="ILC2" value="" />
+            <param name="IAB2" value="" />
+            <param name="IBC2" value="" />
+            <param name="ICA2" value="" />
+            <param name="IMA" value="" />
+            <param name="IMB" value="" />
+            <param name="IMC" value="" />
+            <param name="FLXA" value="" />
+            <param name="FLXB" value="" />
+            <param name="FLXC" value="" />
+            <param name="IMAB" value="" />
+            <param name="IMBC" value="" />
+            <param name="IMCA" value="" />
+            <param name="FLXAB" value="" />
+            <param name="FLXBC" value="" />
+            <param name="FLXCA" value="" />
+            <param name="Hys" value="0" />
+            <param name="Fremn1" value="0.0" />
+            <param name="Fremn2" value="0.0" />
+            <param name="Fremn3" value="0.0" />
+            <param name="LW2" value="10" />
+            <param name="Bnom" value="1.7" />
+            <param name="material" value="1" />
+            <param name="C" value="0.1" />
+            <param name="K" value="5.0e-5" />
+            <param name="BETA" value="0.96" />
+            <param name="alpha" value="1.325e-5" />
+            <param name="Msat" value="1.72e6" />
+            <param name="F1" value="2730" />
+            <param name="F2" value="3209" />
+            <param name="F3" value="20294" />
+            <param name="Fb" value="2" />
+            <param name="HA1" value="" />
+            <param name="HB1" value="" />
+            <param name="HC1" value="" />
+            <param name="BA1" value="" />
+            <param name="BB1" value="" />
+            <param name="BC1" value="" />
+            <param name="HAB1" value="" />
+            <param name="HBC1" value="" />
+            <param name="HCA1" value="" />
+            <param name="BAB1" value="" />
+            <param name="BBC1" value="" />
+            <param name="BCA1" value="" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:ground" id="820896589" x="1332" y="1170" w="26" h="20" z="0" orient="4" defn="master:ground" link="-1" q="4">
+          <paramlist link="-1" name="" />
+        </User>
+        <Wire classid="WireOrthogonal" id="1857788289" name="" x="1332" y="1170" w="26" h="8" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="18" y="0" />
+        </Wire>
+        <Wire classid="WireOrthogonal" id="1959189474" name="" x="1116" y="1224" w="8" h="26" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="0" y="-18" />
+        </Wire>
+        <User classid="UserCmp" name="master:xfmr-3p2w" id="424836111" x="1116" y="1152" w="56" h="92" z="1" orient="5" defn="master:xfmr-3p2w" link="-1" q="4">
+          <paramlist link="-1" name="">
+            <param name="Name" value="T32" />
+            <param name="Tmva" value="25.9 [MVA]" />
+            <param name="f" value="60.0 [Hz]" />
+            <param name="YD1" value="0" />
+            <param name="YD2" value="1" />
+            <param name="Lead" value="1" />
+            <param name="Xl" value="0.0578 [pu]" />
+            <param name="Ideal" value="0" />
+            <param name="NLL" value="0.0 [pu]" />
+            <param name="CuL" value="0.0064 [pu]" />
+            <param name="Tap" value="0" />
+            <param name="View" value="1" />
+            <param name="Dtls" value="0" />
+            <param name="V1" value="0.418 [kV]" />
+            <param name="V2" value="34.5 [kV]" />
+            <param name="Enab" value="0" />
+            <param name="Sat" value="1" />
+            <param name="Xair" value="0.2 [pu]" />
+            <param name="Tdc" value="1 [s]" />
+            <param name="Xknee" value="1.25 [pu]" />
+            <param name="Txk" value="0.1 [s]" />
+            <param name="Im1" value="0.4 [%]" />
+            <param name="ILA1" value="" />
+            <param name="ILB1" value="" />
+            <param name="ILC1" value="" />
+            <param name="IAB1" value="Iab1" />
+            <param name="IBC1" value="Ibc1" />
+            <param name="ICA1" value="Ica1" />
+            <param name="ILA2" value="" />
+            <param name="ILB2" value="" />
+            <param name="ILC2" value="" />
+            <param name="IAB2" value="" />
+            <param name="IBC2" value="" />
+            <param name="ICA2" value="" />
+            <param name="IMA" value="" />
+            <param name="IMB" value="" />
+            <param name="IMC" value="" />
+            <param name="FLXA" value="" />
+            <param name="FLXB" value="" />
+            <param name="FLXC" value="" />
+            <param name="IMAB" value="" />
+            <param name="IMBC" value="" />
+            <param name="IMCA" value="" />
+            <param name="FLXAB" value="" />
+            <param name="FLXBC" value="" />
+            <param name="FLXCA" value="" />
+            <param name="Hys" value="0" />
+            <param name="Fremn1" value="0.0" />
+            <param name="Fremn2" value="0.0" />
+            <param name="Fremn3" value="0.0" />
+            <param name="LW2" value="10" />
+            <param name="Bnom" value="1.7" />
+            <param name="material" value="1" />
+            <param name="C" value="0.1" />
+            <param name="K" value="5.0e-5" />
+            <param name="BETA" value="0.96" />
+            <param name="alpha" value="1.325e-5" />
+            <param name="Msat" value="1.72e6" />
+            <param name="F1" value="2730" />
+            <param name="F2" value="3209" />
+            <param name="F3" value="20294" />
+            <param name="Fb" value="2" />
+            <param name="HA1" value="" />
+            <param name="HB1" value="" />
+            <param name="HC1" value="" />
+            <param name="BA1" value="" />
+            <param name="BB1" value="" />
+            <param name="BC1" value="" />
+            <param name="HAB1" value="" />
+            <param name="HBC1" value="" />
+            <param name="HCA1" value="" />
+            <param name="BAB1" value="" />
+            <param name="BBC1" value="" />
+            <param name="BCA1" value="" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:ground" id="1673629431" x="1062" y="1170" w="26" h="20" z="0" orient="4" defn="master:ground" link="-1" q="4">
+          <paramlist link="-1" name="" />
+        </User>
+        <Wire classid="WireOrthogonal" id="1238704124" name="" x="1062" y="1170" w="26" h="8" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="18" y="0" />
+        </Wire>
+        <Wire classid="WireOrthogonal" id="1824234583" name="" x="792" y="1170" w="26" h="8" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="18" y="0" />
+        </Wire>
+        <User classid="UserCmp" name="master:ground" id="97378247" x="792" y="1170" w="26" h="20" z="0" orient="4" defn="master:ground" link="-1" q="4">
+          <paramlist link="-1" name="" />
+        </User>
+        <User classid="UserCmp" name="master:xfmr-3p2w" id="1210823317" x="846" y="1152" w="56" h="92" z="1" orient="5" defn="master:xfmr-3p2w" link="-1" q="4">
+          <paramlist link="-1" name="">
+            <param name="Name" value="T32" />
+            <param name="Tmva" value="25.9 [MVA]" />
+            <param name="f" value="60.0 [Hz]" />
+            <param name="YD1" value="0" />
+            <param name="YD2" value="1" />
+            <param name="Lead" value="1" />
+            <param name="Xl" value="0.0578 [pu]" />
+            <param name="Ideal" value="0" />
+            <param name="NLL" value="0.0 [pu]" />
+            <param name="CuL" value="0.0064 [pu]" />
+            <param name="Tap" value="0" />
+            <param name="View" value="1" />
+            <param name="Dtls" value="0" />
+            <param name="V1" value="0.418 [kV]" />
+            <param name="V2" value="34.5 [kV]" />
+            <param name="Enab" value="0" />
+            <param name="Sat" value="1" />
+            <param name="Xair" value="0.2 [pu]" />
+            <param name="Tdc" value="1 [s]" />
+            <param name="Xknee" value="1.25 [pu]" />
+            <param name="Txk" value="0.1 [s]" />
+            <param name="Im1" value="0.4 [%]" />
+            <param name="ILA1" value="" />
+            <param name="ILB1" value="" />
+            <param name="ILC1" value="" />
+            <param name="IAB1" value="Iab1" />
+            <param name="IBC1" value="Ibc1" />
+            <param name="ICA1" value="Ica1" />
+            <param name="ILA2" value="" />
+            <param name="ILB2" value="" />
+            <param name="ILC2" value="" />
+            <param name="IAB2" value="" />
+            <param name="IBC2" value="" />
+            <param name="ICA2" value="" />
+            <param name="IMA" value="" />
+            <param name="IMB" value="" />
+            <param name="IMC" value="" />
+            <param name="FLXA" value="" />
+            <param name="FLXB" value="" />
+            <param name="FLXC" value="" />
+            <param name="IMAB" value="" />
+            <param name="IMBC" value="" />
+            <param name="IMCA" value="" />
+            <param name="FLXAB" value="" />
+            <param name="FLXBC" value="" />
+            <param name="FLXCA" value="" />
+            <param name="Hys" value="0" />
+            <param name="Fremn1" value="0.0" />
+            <param name="Fremn2" value="0.0" />
+            <param name="Fremn3" value="0.0" />
+            <param name="LW2" value="10" />
+            <param name="Bnom" value="1.7" />
+            <param name="material" value="1" />
+            <param name="C" value="0.1" />
+            <param name="K" value="5.0e-5" />
+            <param name="BETA" value="0.96" />
+            <param name="alpha" value="1.325e-5" />
+            <param name="Msat" value="1.72e6" />
+            <param name="F1" value="2730" />
+            <param name="F2" value="3209" />
+            <param name="F3" value="20294" />
+            <param name="Fb" value="2" />
+            <param name="HA1" value="" />
+            <param name="HB1" value="" />
+            <param name="HC1" value="" />
+            <param name="BA1" value="" />
+            <param name="BB1" value="" />
+            <param name="BC1" value="" />
+            <param name="HAB1" value="" />
+            <param name="HBC1" value="" />
+            <param name="HCA1" value="" />
+            <param name="BAB1" value="" />
+            <param name="BBC1" value="" />
+            <param name="BCA1" value="" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" defn="master:breakout" id="598123129" x="846" y="1224" w="75" h="38" z="0" orient="1" link="-1" q="4">
+          <paramlist link="-1" name="">
+            <param name="Dis" value="0" />
+            <param name="Com" value="0" />
+          </paramlist>
+        </User>
+        <Wire classid="WireOrthogonal" id="211678533" name="" x="846" y="1224" w="8" h="26" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="0" y="-18" />
+        </Wire>
+        <Wire classid="WireOrthogonal" id="1111526978" name="" x="1026" y="684" w="26" h="8" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="-18" y="0" />
+        </Wire>
+        <User classid="UserCmp" name="master:ground" id="1366693209" x="1026" y="684" w="26" h="20" z="0" orient="6" defn="master:ground" link="-1" q="4">
+          <paramlist link="-1" name="" />
+        </User>
+        <User classid="UserCmp" name="master:xfmr-3p2w" id="294758746" x="972" y="702" w="56" h="92" z="1" orient="7" defn="master:xfmr-3p2w" link="-1" q="4">
+          <paramlist link="-1" name="">
+            <param name="Name" value="T32" />
+            <param name="Tmva" value="25.9 [MVA]" />
+            <param name="f" value="60.0 [Hz]" />
+            <param name="YD1" value="0" />
+            <param name="YD2" value="1" />
+            <param name="Lead" value="1" />
+            <param name="Xl" value="0.0578 [pu]" />
+            <param name="Ideal" value="0" />
+            <param name="NLL" value="0.0 [pu]" />
+            <param name="CuL" value="0.0064 [pu]" />
+            <param name="Tap" value="0" />
+            <param name="View" value="1" />
+            <param name="Dtls" value="0" />
+            <param name="V1" value="0.418 [kV]" />
+            <param name="V2" value="34.5 [kV]" />
+            <param name="Enab" value="0" />
+            <param name="Sat" value="1" />
+            <param name="Xair" value="0.2 [pu]" />
+            <param name="Tdc" value="1 [s]" />
+            <param name="Xknee" value="1.25 [pu]" />
+            <param name="Txk" value="0.1 [s]" />
+            <param name="Im1" value="0.4 [%]" />
+            <param name="ILA1" value="" />
+            <param name="ILB1" value="" />
+            <param name="ILC1" value="" />
+            <param name="IAB1" value="Iab1" />
+            <param name="IBC1" value="Ibc1" />
+            <param name="ICA1" value="Ica1" />
+            <param name="ILA2" value="" />
+            <param name="ILB2" value="" />
+            <param name="ILC2" value="" />
+            <param name="IAB2" value="" />
+            <param name="IBC2" value="" />
+            <param name="ICA2" value="" />
+            <param name="IMA" value="" />
+            <param name="IMB" value="" />
+            <param name="IMC" value="" />
+            <param name="FLXA" value="" />
+            <param name="FLXB" value="" />
+            <param name="FLXC" value="" />
+            <param name="IMAB" value="" />
+            <param name="IMBC" value="" />
+            <param name="IMCA" value="" />
+            <param name="FLXAB" value="" />
+            <param name="FLXBC" value="" />
+            <param name="FLXCA" value="" />
+            <param name="Hys" value="0" />
+            <param name="Fremn1" value="0.0" />
+            <param name="Fremn2" value="0.0" />
+            <param name="Fremn3" value="0.0" />
+            <param name="LW2" value="10" />
+            <param name="Bnom" value="1.7" />
+            <param name="material" value="1" />
+            <param name="C" value="0.1" />
+            <param name="K" value="5.0e-5" />
+            <param name="BETA" value="0.96" />
+            <param name="alpha" value="1.325e-5" />
+            <param name="Msat" value="1.72e6" />
+            <param name="F1" value="2730" />
+            <param name="F2" value="3209" />
+            <param name="F3" value="20294" />
+            <param name="Fb" value="2" />
+            <param name="HA1" value="" />
+            <param name="HB1" value="" />
+            <param name="HC1" value="" />
+            <param name="BA1" value="" />
+            <param name="BB1" value="" />
+            <param name="BC1" value="" />
+            <param name="HAB1" value="" />
+            <param name="HBC1" value="" />
+            <param name="HCA1" value="" />
+            <param name="BAB1" value="" />
+            <param name="BBC1" value="" />
+            <param name="BCA1" value="" />
+          </paramlist>
+        </User>
+        <Wire classid="WireOrthogonal" id="69906815" name="" x="972" y="630" w="8" h="26" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="0" y="18" />
+        </Wire>
+        <Wire classid="WireOrthogonal" id="1671669837" name="" x="774" y="666" w="26" h="8" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="-18" y="0" />
+        </Wire>
+        <User classid="UserCmp" name="master:ground" id="1379105021" x="774" y="666" w="26" h="20" z="0" orient="6" defn="master:ground" link="-1" q="4">
+          <paramlist link="-1" name="" />
+        </User>
+        <User classid="UserCmp" name="master:xfmr-3p2w" id="1272004993" x="720" y="684" w="56" h="92" z="1" orient="7" defn="master:xfmr-3p2w" link="-1" q="4">
+          <paramlist link="-1" name="">
+            <param name="Name" value="T32" />
+            <param name="Tmva" value="25.9 [MVA]" />
+            <param name="f" value="60.0 [Hz]" />
+            <param name="YD1" value="0" />
+            <param name="YD2" value="1" />
+            <param name="Lead" value="1" />
+            <param name="Xl" value="0.0578 [pu]" />
+            <param name="Ideal" value="0" />
+            <param name="NLL" value="0.0 [pu]" />
+            <param name="CuL" value="0.0064 [pu]" />
+            <param name="Tap" value="0" />
+            <param name="View" value="1" />
+            <param name="Dtls" value="0" />
+            <param name="V1" value="0.418 [kV]" />
+            <param name="V2" value="34.5 [kV]" />
+            <param name="Enab" value="0" />
+            <param name="Sat" value="1" />
+            <param name="Xair" value="0.2 [pu]" />
+            <param name="Tdc" value="1 [s]" />
+            <param name="Xknee" value="1.25 [pu]" />
+            <param name="Txk" value="0.1 [s]" />
+            <param name="Im1" value="0.4 [%]" />
+            <param name="ILA1" value="" />
+            <param name="ILB1" value="" />
+            <param name="ILC1" value="" />
+            <param name="IAB1" value="Iab1" />
+            <param name="IBC1" value="Ibc1" />
+            <param name="ICA1" value="Ica1" />
+            <param name="ILA2" value="" />
+            <param name="ILB2" value="" />
+            <param name="ILC2" value="" />
+            <param name="IAB2" value="" />
+            <param name="IBC2" value="" />
+            <param name="ICA2" value="" />
+            <param name="IMA" value="" />
+            <param name="IMB" value="" />
+            <param name="IMC" value="" />
+            <param name="FLXA" value="" />
+            <param name="FLXB" value="" />
+            <param name="FLXC" value="" />
+            <param name="IMAB" value="" />
+            <param name="IMBC" value="" />
+            <param name="IMCA" value="" />
+            <param name="FLXAB" value="" />
+            <param name="FLXBC" value="" />
+            <param name="FLXCA" value="" />
+            <param name="Hys" value="0" />
+            <param name="Fremn1" value="0.0" />
+            <param name="Fremn2" value="0.0" />
+            <param name="Fremn3" value="0.0" />
+            <param name="LW2" value="10" />
+            <param name="Bnom" value="1.7" />
+            <param name="material" value="1" />
+            <param name="C" value="0.1" />
+            <param name="K" value="5.0e-5" />
+            <param name="BETA" value="0.96" />
+            <param name="alpha" value="1.325e-5" />
+            <param name="Msat" value="1.72e6" />
+            <param name="F1" value="2730" />
+            <param name="F2" value="3209" />
+            <param name="F3" value="20294" />
+            <param name="Fb" value="2" />
+            <param name="HA1" value="" />
+            <param name="HB1" value="" />
+            <param name="HC1" value="" />
+            <param name="BA1" value="" />
+            <param name="BB1" value="" />
+            <param name="BC1" value="" />
+            <param name="HAB1" value="" />
+            <param name="HBC1" value="" />
+            <param name="HCA1" value="" />
+            <param name="BAB1" value="" />
+            <param name="BBC1" value="" />
+            <param name="BCA1" value="" />
+          </paramlist>
+        </User>
+        <Wire classid="WireOrthogonal" id="393185101" name="" x="504" y="666" w="26" h="8" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="-18" y="0" />
+        </Wire>
+        <User classid="UserCmp" name="master:ground" id="840021325" x="504" y="666" w="26" h="20" z="0" orient="6" defn="master:ground" link="-1" q="4">
+          <paramlist link="-1" name="" />
+        </User>
+        <User classid="UserCmp" name="master:xfmr-3p2w" id="1751223815" x="450" y="684" w="56" h="92" z="1" orient="7" defn="master:xfmr-3p2w" link="-1" q="4">
+          <paramlist link="-1" name="">
+            <param name="Name" value="T32" />
+            <param name="Tmva" value="25.9 [MVA]" />
+            <param name="f" value="60.0 [Hz]" />
+            <param name="YD1" value="0" />
+            <param name="YD2" value="1" />
+            <param name="Lead" value="1" />
+            <param name="Xl" value="0.0578 [pu]" />
+            <param name="Ideal" value="0" />
+            <param name="NLL" value="0.0 [pu]" />
+            <param name="CuL" value="0.0064 [pu]" />
+            <param name="Tap" value="0" />
+            <param name="View" value="1" />
+            <param name="Dtls" value="0" />
+            <param name="V1" value="0.418 [kV]" />
+            <param name="V2" value="34.5 [kV]" />
+            <param name="Enab" value="0" />
+            <param name="Sat" value="1" />
+            <param name="Xair" value="0.2 [pu]" />
+            <param name="Tdc" value="1 [s]" />
+            <param name="Xknee" value="1.25 [pu]" />
+            <param name="Txk" value="0.1 [s]" />
+            <param name="Im1" value="0.4 [%]" />
+            <param name="ILA1" value="" />
+            <param name="ILB1" value="" />
+            <param name="ILC1" value="" />
+            <param name="IAB1" value="Iab1" />
+            <param name="IBC1" value="Ibc1" />
+            <param name="ICA1" value="Ica1" />
+            <param name="ILA2" value="" />
+            <param name="ILB2" value="" />
+            <param name="ILC2" value="" />
+            <param name="IAB2" value="" />
+            <param name="IBC2" value="" />
+            <param name="ICA2" value="" />
+            <param name="IMA" value="" />
+            <param name="IMB" value="" />
+            <param name="IMC" value="" />
+            <param name="FLXA" value="" />
+            <param name="FLXB" value="" />
+            <param name="FLXC" value="" />
+            <param name="IMAB" value="" />
+            <param name="IMBC" value="" />
+            <param name="IMCA" value="" />
+            <param name="FLXAB" value="" />
+            <param name="FLXBC" value="" />
+            <param name="FLXCA" value="" />
+            <param name="Hys" value="0" />
+            <param name="Fremn1" value="0.0" />
+            <param name="Fremn2" value="0.0" />
+            <param name="Fremn3" value="0.0" />
+            <param name="LW2" value="10" />
+            <param name="Bnom" value="1.7" />
+            <param name="material" value="1" />
+            <param name="C" value="0.1" />
+            <param name="K" value="5.0e-5" />
+            <param name="BETA" value="0.96" />
+            <param name="alpha" value="1.325e-5" />
+            <param name="Msat" value="1.72e6" />
+            <param name="F1" value="2730" />
+            <param name="F2" value="3209" />
+            <param name="F3" value="20294" />
+            <param name="Fb" value="2" />
+            <param name="HA1" value="" />
+            <param name="HB1" value="" />
+            <param name="HC1" value="" />
+            <param name="BA1" value="" />
+            <param name="BB1" value="" />
+            <param name="BC1" value="" />
+            <param name="HAB1" value="" />
+            <param name="HBC1" value="" />
+            <param name="HCA1" value="" />
+            <param name="BAB1" value="" />
+            <param name="BBC1" value="" />
+            <param name="BCA1" value="" />
+          </paramlist>
+        </User>
+        <Wire classid="WireOrthogonal" id="848100675" name="" x="198" y="630" w="8" h="26" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="0" y="18" />
+        </Wire>
+        <User classid="UserCmp" name="master:xfmr-3p2w" id="2131032584" x="198" y="702" w="56" h="92" z="1" orient="7" defn="master:xfmr-3p2w" link="-1" q="4">
+          <paramlist link="-1" name="">
+            <param name="Name" value="T32" />
+            <param name="Tmva" value="25.9 [MVA]" />
+            <param name="f" value="60.0 [Hz]" />
+            <param name="YD1" value="0" />
+            <param name="YD2" value="1" />
+            <param name="Lead" value="1" />
+            <param name="Xl" value="0.0578 [pu]" />
+            <param name="Ideal" value="0" />
+            <param name="NLL" value="0.0 [pu]" />
+            <param name="CuL" value="0.0064 [pu]" />
+            <param name="Tap" value="0" />
+            <param name="View" value="1" />
+            <param name="Dtls" value="0" />
+            <param name="V1" value="0.418 [kV]" />
+            <param name="V2" value="34.5 [kV]" />
+            <param name="Enab" value="0" />
+            <param name="Sat" value="1" />
+            <param name="Xair" value="0.2 [pu]" />
+            <param name="Tdc" value="1 [s]" />
+            <param name="Xknee" value="1.25 [pu]" />
+            <param name="Txk" value="0.1 [s]" />
+            <param name="Im1" value="0.4 [%]" />
+            <param name="ILA1" value="" />
+            <param name="ILB1" value="" />
+            <param name="ILC1" value="" />
+            <param name="IAB1" value="Iab1" />
+            <param name="IBC1" value="Ibc1" />
+            <param name="ICA1" value="Ica1" />
+            <param name="ILA2" value="" />
+            <param name="ILB2" value="" />
+            <param name="ILC2" value="" />
+            <param name="IAB2" value="" />
+            <param name="IBC2" value="" />
+            <param name="ICA2" value="" />
+            <param name="IMA" value="" />
+            <param name="IMB" value="" />
+            <param name="IMC" value="" />
+            <param name="FLXA" value="" />
+            <param name="FLXB" value="" />
+            <param name="FLXC" value="" />
+            <param name="IMAB" value="" />
+            <param name="IMBC" value="" />
+            <param name="IMCA" value="" />
+            <param name="FLXAB" value="" />
+            <param name="FLXBC" value="" />
+            <param name="FLXCA" value="" />
+            <param name="Hys" value="0" />
+            <param name="Fremn1" value="0.0" />
+            <param name="Fremn2" value="0.0" />
+            <param name="Fremn3" value="0.0" />
+            <param name="LW2" value="10" />
+            <param name="Bnom" value="1.7" />
+            <param name="material" value="1" />
+            <param name="C" value="0.1" />
+            <param name="K" value="5.0e-5" />
+            <param name="BETA" value="0.96" />
+            <param name="alpha" value="1.325e-5" />
+            <param name="Msat" value="1.72e6" />
+            <param name="F1" value="2730" />
+            <param name="F2" value="3209" />
+            <param name="F3" value="20294" />
+            <param name="Fb" value="2" />
+            <param name="HA1" value="" />
+            <param name="HB1" value="" />
+            <param name="HC1" value="" />
+            <param name="BA1" value="" />
+            <param name="BB1" value="" />
+            <param name="BC1" value="" />
+            <param name="HAB1" value="" />
+            <param name="HBC1" value="" />
+            <param name="HCA1" value="" />
+            <param name="BAB1" value="" />
+            <param name="BBC1" value="" />
+            <param name="BCA1" value="" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:ground" id="1092954182" x="252" y="684" w="26" h="20" z="0" orient="6" defn="master:ground" link="-1" q="4">
+          <paramlist link="-1" name="" />
+        </User>
+        <Wire classid="WireOrthogonal" id="216503694" name="" x="252" y="684" w="26" h="8" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="-18" y="0" />
+        </Wire>
+        <Wire classid="WireOrthogonal" name="" x="198" y="72" w="116" h="8" orient="0" id="465473687">
+          <vertex x="0" y="0" />
+          <vertex x="108" y="0" />
+        </Wire>
+        <User classid="UserCmp" name="master:const" id="1822790790" x="162" y="72" w="67" h="17" z="20" orient="0" defn="master:const" link="-1" q="4">
+          <paramlist link="-1" name="">
+            <param name="Name" value="" />
+            <param name="Value" value="975" />
+            <param name="Dim" value="1" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:const" id="223645738" x="162" y="0" w="67" h="17" z="10" orient="0" defn="master:const" link="-1" q="4">
+          <paramlist link="-1" name="">
+            <param name="Name" value="" />
+            <param name="Value" value="0.0000125" />
+            <param name="Dim" value="1" />
+          </paramlist>
+        </User>
+        <Wire classid="WireOrthogonal" name="" x="198" y="0" w="116" h="8" orient="0" id="76089139">
+          <vertex x="0" y="0" />
+          <vertex x="108" y="0" />
+        </Wire>
+        <User classid="UserCmp" name="master:datalabel" defn="master:datalabel" id="1078245079" x="306" y="72" w="28" h="19" z="1" orient="0" link="-1" q="4">
+          <paramlist link="-1" name="">
+            <param name="Name" value="LC_C" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" defn="master:datalabel" id="899529873" x="306" y="0" w="28" h="19" z="1" orient="0" link="-1" q="4">
+          <paramlist link="-1" name="">
+            <param name="Name" value="LC_L" />
+          </paramlist>
+        </User>
+        <Wire classid="WireOrthogonal" id="1245837820" name="" x="504" y="756" w="8" h="80" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="0" y="72" />
+        </Wire>
+        <Wire classid="WireOrthogonal" id="81303516" name="" x="324" y="774" w="8" h="62" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="0" y="54" />
+        </Wire>
+        <User classid="UserCmp" name="master:newpi" id="383174350" x="288" y="774" w="110" h="18" z="1" orient="4" defn="master:newpi" link="-1" q="4">
+          <paramlist link="-1" name="">
+            <param name="Name" value="Line1" />
+            <param name="PU" value="3" />
+            <param name="Config" value="1" />
+            <param name="F" value="60.0 [Hz]" />
+            <param name="len" value="1 [m]" />
+            <param name="Estim" value="0" />
+            <param name="View" value="2" />
+            <param name="REst" value="1.5" />
+            <param name="ZEst" value="1.5" />
+            <param name="TEst" value="1.5" />
+            <param name="VR" value="230.0 [kV]" />
+            <param name="MVA" value="100.0 [MVA]" />
+            <param name="RPUP" value=".336786E-7 [pu/m]" />
+            <param name="XLPUP" value=".593346E-6 [pu/m]" />
+            <param name="XCPUP" value=".517098E6 [pu*m]" />
+            <param name="RPUZ" value=".558072E-6 [pu/m]" />
+            <param name="XLPUZ" value=".196578E-5 [pu/m]" />
+            <param name="XCPUZ" value=".782919E6 [pu*m]" />
+            <param name="Rp" value="0.3110 [ohm/m]" />
+            <param name="Xp" value="0.4185 [ohm/m]" />
+            <param name="Bp" value="0.1050 [Mohm*m]" />
+            <param name="Rz" value="0.9333 [ohm/m]" />
+            <param name="Xz" value="1.2554 [ohm/m]" />
+            <param name="Bz" value="0.0525 [Mohm*m]" />
+            <param name="RTP" value=".1781598E-4 [ohm/m]" />
+            <param name="TTP" value=".2841427 [ms]" />
+            <param name="ZTP" value="293.0192 [ohm]" />
+            <param name="RTZ" value=".2952201E-3 [ohm/m]" />
+            <param name="TTZ" value=".4203179 [ms]" />
+            <param name="ZTZ" value="656.2685 [ohm]" />
+            <param name="VR2" value="34.5 [kV]" />
+            <param name="MVA2" value="100.0 [MVA]" />
+            <param name="RPUP2" value="0.0046 [pu/m]" />
+            <param name="XLPUP2" value="0.0016 [pu/m]" />
+            <param name="BPUP2" value="0.000063 [pu/m]" />
+            <param name="RPUZ2" value="0.0082 [pu/m]" />
+            <param name="XLPUZ2" value="0.0017 [pu/m]" />
+            <param name="BPUZ2" value="0.000064 [pu/m]" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:newpi" id="1652510604" x="396" y="774" w="110" h="18" z="1" orient="4" defn="master:newpi" link="-1" q="4">
+          <paramlist link="-1" name="">
+            <param name="Name" value="Line1" />
+            <param name="PU" value="3" />
+            <param name="Config" value="1" />
+            <param name="F" value="60.0 [Hz]" />
+            <param name="len" value="1 [m]" />
+            <param name="Estim" value="0" />
+            <param name="View" value="2" />
+            <param name="REst" value="1.5" />
+            <param name="ZEst" value="1.5" />
+            <param name="TEst" value="1.5" />
+            <param name="VR" value="230.0 [kV]" />
+            <param name="MVA" value="100.0 [MVA]" />
+            <param name="RPUP" value=".336786E-7 [pu/m]" />
+            <param name="XLPUP" value=".593346E-6 [pu/m]" />
+            <param name="XCPUP" value=".517098E6 [pu*m]" />
+            <param name="RPUZ" value=".558072E-6 [pu/m]" />
+            <param name="XLPUZ" value=".196578E-5 [pu/m]" />
+            <param name="XCPUZ" value=".782919E6 [pu*m]" />
+            <param name="Rp" value="0.3110 [ohm/m]" />
+            <param name="Xp" value="0.4185 [ohm/m]" />
+            <param name="Bp" value="0.1050 [Mohm*m]" />
+            <param name="Rz" value="0.9333 [ohm/m]" />
+            <param name="Xz" value="1.2554 [ohm/m]" />
+            <param name="Bz" value="0.0525 [Mohm*m]" />
+            <param name="RTP" value=".1781598E-4 [ohm/m]" />
+            <param name="TTP" value=".2841427 [ms]" />
+            <param name="ZTP" value="293.0192 [ohm]" />
+            <param name="RTZ" value=".2952201E-3 [ohm/m]" />
+            <param name="TTZ" value=".4203179 [ms]" />
+            <param name="ZTZ" value="656.2685 [ohm]" />
+            <param name="VR2" value="34.5 [kV]" />
+            <param name="MVA2" value="100.0 [MVA]" />
+            <param name="RPUP2" value="0.0046 [pu/m]" />
+            <param name="XLPUP2" value="0.0016 [pu/m]" />
+            <param name="BPUP2" value="0.000063 [pu/m]" />
+            <param name="RPUZ2" value="0.0082 [pu/m]" />
+            <param name="XLPUZ2" value="0.0017 [pu/m]" />
+            <param name="BPUZ2" value="0.000064 [pu/m]" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:newpi" id="368111276" x="576" y="756" w="110" h="18" z="1" orient="4" defn="master:newpi" link="-1" q="4">
+          <paramlist link="-1" name="">
+            <param name="Name" value="Line1" />
+            <param name="PU" value="3" />
+            <param name="Config" value="1" />
+            <param name="F" value="60.0 [Hz]" />
+            <param name="len" value="1 [m]" />
+            <param name="Estim" value="0" />
+            <param name="View" value="2" />
+            <param name="REst" value="1.5" />
+            <param name="ZEst" value="1.5" />
+            <param name="TEst" value="1.5" />
+            <param name="VR" value="230.0 [kV]" />
+            <param name="MVA" value="100.0 [MVA]" />
+            <param name="RPUP" value=".336786E-7 [pu/m]" />
+            <param name="XLPUP" value=".593346E-6 [pu/m]" />
+            <param name="XCPUP" value=".517098E6 [pu*m]" />
+            <param name="RPUZ" value=".558072E-6 [pu/m]" />
+            <param name="XLPUZ" value=".196578E-5 [pu/m]" />
+            <param name="XCPUZ" value=".782919E6 [pu*m]" />
+            <param name="Rp" value="0.3110 [ohm/m]" />
+            <param name="Xp" value="0.4185 [ohm/m]" />
+            <param name="Bp" value="0.1050 [Mohm*m]" />
+            <param name="Rz" value="0.9333 [ohm/m]" />
+            <param name="Xz" value="1.2554 [ohm/m]" />
+            <param name="Bz" value="0.0525 [Mohm*m]" />
+            <param name="RTP" value=".1781598E-4 [ohm/m]" />
+            <param name="TTP" value=".2841427 [ms]" />
+            <param name="ZTP" value="293.0192 [ohm]" />
+            <param name="RTZ" value=".2952201E-3 [ohm/m]" />
+            <param name="TTZ" value=".4203179 [ms]" />
+            <param name="ZTZ" value="656.2685 [ohm]" />
+            <param name="VR2" value="34.5 [kV]" />
+            <param name="MVA2" value="100.0 [MVA]" />
+            <param name="RPUP2" value="0.0068 [pu/m]" />
+            <param name="XLPUP2" value="0.0024 [pu/m]" />
+            <param name="BPUP2" value="0.000094 [pu/m]" />
+            <param name="RPUZ2" value="0.0122 [pu/m]" />
+            <param name="XLPUZ2" value="0.0025 [pu/m]" />
+            <param name="BPUZ2" value="0.000095 [pu/m]" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:newpi" id="363338764" x="684" y="756" w="110" h="18" z="1" orient="4" defn="master:newpi" link="-1" q="4">
+          <paramlist link="-1" name="">
+            <param name="Name" value="Line1" />
+            <param name="PU" value="3" />
+            <param name="Config" value="1" />
+            <param name="F" value="60.0 [Hz]" />
+            <param name="len" value="1 [m]" />
+            <param name="Estim" value="0" />
+            <param name="View" value="2" />
+            <param name="REst" value="1.5" />
+            <param name="ZEst" value="1.5" />
+            <param name="TEst" value="1.5" />
+            <param name="VR" value="230.0 [kV]" />
+            <param name="MVA" value="100.0 [MVA]" />
+            <param name="RPUP" value=".336786E-7 [pu/m]" />
+            <param name="XLPUP" value=".593346E-6 [pu/m]" />
+            <param name="XCPUP" value=".517098E6 [pu*m]" />
+            <param name="RPUZ" value=".558072E-6 [pu/m]" />
+            <param name="XLPUZ" value=".196578E-5 [pu/m]" />
+            <param name="XCPUZ" value=".782919E6 [pu*m]" />
+            <param name="Rp" value="0.3110 [ohm/m]" />
+            <param name="Xp" value="0.4185 [ohm/m]" />
+            <param name="Bp" value="0.1050 [Mohm*m]" />
+            <param name="Rz" value="0.9333 [ohm/m]" />
+            <param name="Xz" value="1.2554 [ohm/m]" />
+            <param name="Bz" value="0.0525 [Mohm*m]" />
+            <param name="RTP" value=".1781598E-4 [ohm/m]" />
+            <param name="TTP" value=".2841427 [ms]" />
+            <param name="ZTP" value="293.0192 [ohm]" />
+            <param name="RTZ" value=".2952201E-3 [ohm/m]" />
+            <param name="TTZ" value=".4203179 [ms]" />
+            <param name="ZTZ" value="656.2685 [ohm]" />
+            <param name="VR2" value="34.5 [kV]" />
+            <param name="MVA2" value="100.0 [MVA]" />
+            <param name="RPUP2" value="0.0127 [pu/m]" />
+            <param name="XLPUP2" value="0.0045 [pu/m]" />
+            <param name="BPUP2" value="0.000176 [pu/m]" />
+            <param name="RPUZ2" value="0.0228 [pu/m]" />
+            <param name="XLPUZ2" value="0.0047 [pu/m]" />
+            <param name="BPUZ2" value="0.000177 [pu/m]" />
+          </paramlist>
+        </User>
+        <Wire classid="WireOrthogonal" id="1723571678" name="" x="270" y="828" w="458" h="8" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="450" y="0" />
+        </Wire>
+        <User classid="UserCmp" name="master:newpi" id="633678844" x="792" y="828" w="110" h="18" z="1" orient="4" defn="master:newpi" link="-1" q="4">
+          <paramlist link="-1" name="">
+            <param name="Name" value="Line1" />
+            <param name="PU" value="3" />
+            <param name="Config" value="1" />
+            <param name="F" value="60.0 [Hz]" />
+            <param name="len" value="1 [m]" />
+            <param name="Estim" value="0" />
+            <param name="View" value="2" />
+            <param name="REst" value="1.5" />
+            <param name="ZEst" value="1.5" />
+            <param name="TEst" value="1.5" />
+            <param name="VR" value="230.0 [kV]" />
+            <param name="MVA" value="100.0 [MVA]" />
+            <param name="RPUP" value=".336786E-7 [pu/m]" />
+            <param name="XLPUP" value=".593346E-6 [pu/m]" />
+            <param name="XCPUP" value=".517098E6 [pu*m]" />
+            <param name="RPUZ" value=".558072E-6 [pu/m]" />
+            <param name="XLPUZ" value=".196578E-5 [pu/m]" />
+            <param name="XCPUZ" value=".782919E6 [pu*m]" />
+            <param name="Rp" value="0.3110 [ohm/m]" />
+            <param name="Xp" value="0.4185 [ohm/m]" />
+            <param name="Bp" value="0.1050 [Mohm*m]" />
+            <param name="Rz" value="0.9333 [ohm/m]" />
+            <param name="Xz" value="1.2554 [ohm/m]" />
+            <param name="Bz" value="0.0525 [Mohm*m]" />
+            <param name="RTP" value=".1781598E-4 [ohm/m]" />
+            <param name="TTP" value=".2841427 [ms]" />
+            <param name="ZTP" value="293.0192 [ohm]" />
+            <param name="RTZ" value=".2952201E-3 [ohm/m]" />
+            <param name="TTZ" value=".4203179 [ms]" />
+            <param name="ZTZ" value="656.2685 [ohm]" />
+            <param name="VR2" value="34.5 [kV]" />
+            <param name="MVA2" value="100.0 [MVA]" />
+            <param name="RPUP2" value="0.0018 [pu/m]" />
+            <param name="XLPUP2" value="0.0021 [pu/m]" />
+            <param name="BPUP2" value="0.00173 [pu/m]" />
+            <param name="RPUZ2" value="0.0061 [pu/m]" />
+            <param name="XLPUZ2" value="0.0018 [pu/m]" />
+            <param name="BPUZ2" value="0.000175 [pu/m]" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:newpi" id="1295892739" x="954" y="828" w="110" h="18" z="1" orient="4" defn="master:newpi" link="-1" q="4">
+          <paramlist link="-1" name="">
+            <param name="Name" value="Line1" />
+            <param name="PU" value="3" />
+            <param name="Config" value="1" />
+            <param name="F" value="60.0 [Hz]" />
+            <param name="len" value="1 [m]" />
+            <param name="Estim" value="0" />
+            <param name="View" value="2" />
+            <param name="REst" value="1.5" />
+            <param name="ZEst" value="1.5" />
+            <param name="TEst" value="1.5" />
+            <param name="VR" value="230.0 [kV]" />
+            <param name="MVA" value="100.0 [MVA]" />
+            <param name="RPUP" value=".336786E-7 [pu/m]" />
+            <param name="XLPUP" value=".593346E-6 [pu/m]" />
+            <param name="XCPUP" value=".517098E6 [pu*m]" />
+            <param name="RPUZ" value=".558072E-6 [pu/m]" />
+            <param name="XLPUZ" value=".196578E-5 [pu/m]" />
+            <param name="XCPUZ" value=".782919E6 [pu*m]" />
+            <param name="Rp" value="0.3110 [ohm/m]" />
+            <param name="Xp" value="0.4185 [ohm/m]" />
+            <param name="Bp" value="0.1050 [Mohm*m]" />
+            <param name="Rz" value="0.9333 [ohm/m]" />
+            <param name="Xz" value="1.2554 [ohm/m]" />
+            <param name="Bz" value="0.0525 [Mohm*m]" />
+            <param name="RTP" value=".1781598E-4 [ohm/m]" />
+            <param name="TTP" value=".2841427 [ms]" />
+            <param name="ZTP" value="293.0192 [ohm]" />
+            <param name="RTZ" value=".2952201E-3 [ohm/m]" />
+            <param name="TTZ" value=".4203179 [ms]" />
+            <param name="ZTZ" value="656.2685 [ohm]" />
+            <param name="VR2" value="34.5 [kV]" />
+            <param name="MVA2" value="100.0 [MVA]" />
+            <param name="RPUP2" value="0.0063 [pu/m]" />
+            <param name="XLPUP2" value="0.0040 [pu/m]" />
+            <param name="BPUP2" value="0.000222 [pu/m]" />
+            <param name="RPUZ2" value="0.00113 [pu/m]" />
+            <param name="XLPUZ2" value="0.0029 [pu/m]" />
+            <param name="BPUZ2" value="0.000225 [pu/m]" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:newpi" id="893518621" x="1098" y="828" w="110" h="18" z="1" orient="4" defn="master:newpi" link="-1" q="4">
+          <paramlist link="-1" name="">
+            <param name="Name" value="Line1" />
+            <param name="PU" value="3" />
+            <param name="Config" value="1" />
+            <param name="F" value="60.0 [Hz]" />
+            <param name="len" value="1 [m]" />
+            <param name="Estim" value="0" />
+            <param name="View" value="2" />
+            <param name="REst" value="1.5" />
+            <param name="ZEst" value="1.5" />
+            <param name="TEst" value="1.5" />
+            <param name="VR" value="230.0 [kV]" />
+            <param name="MVA" value="100.0 [MVA]" />
+            <param name="RPUP" value=".336786E-7 [pu/m]" />
+            <param name="XLPUP" value=".593346E-6 [pu/m]" />
+            <param name="XCPUP" value=".517098E6 [pu*m]" />
+            <param name="RPUZ" value=".558072E-6 [pu/m]" />
+            <param name="XLPUZ" value=".196578E-5 [pu/m]" />
+            <param name="XCPUZ" value=".782919E6 [pu*m]" />
+            <param name="Rp" value="0.3110 [ohm/m]" />
+            <param name="Xp" value="0.4185 [ohm/m]" />
+            <param name="Bp" value="0.1050 [Mohm*m]" />
+            <param name="Rz" value="0.9333 [ohm/m]" />
+            <param name="Xz" value="1.2554 [ohm/m]" />
+            <param name="Bz" value="0.0525 [Mohm*m]" />
+            <param name="RTP" value=".1781598E-4 [ohm/m]" />
+            <param name="TTP" value=".2841427 [ms]" />
+            <param name="ZTP" value="293.0192 [ohm]" />
+            <param name="RTZ" value=".2952201E-3 [ohm/m]" />
+            <param name="TTZ" value=".4203179 [ms]" />
+            <param name="ZTZ" value="656.2685 [ohm]" />
+            <param name="VR2" value="34.5 [kV]" />
+            <param name="MVA2" value="100.0 [MVA]" />
+            <param name="RPUP2" value="0.0067 [pu/m]" />
+            <param name="XLPUP2" value="0.0042 [pu/m]" />
+            <param name="BPUP2" value="0.000235 [pu/m]" />
+            <param name="RPUZ2" value="0.00120 [pu/m]" />
+            <param name="XLPUZ2" value="0.0031 [pu/m]" />
+            <param name="BPUZ2" value="0.000238 [pu/m]" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:newpi" id="1301502715" x="1242" y="828" w="110" h="18" z="1" orient="4" defn="master:newpi" link="-1" q="4">
+          <paramlist link="-1" name="">
+            <param name="Name" value="Line1" />
+            <param name="PU" value="3" />
+            <param name="Config" value="1" />
+            <param name="F" value="60.0 [Hz]" />
+            <param name="len" value="1 [m]" />
+            <param name="Estim" value="0" />
+            <param name="View" value="2" />
+            <param name="REst" value="1.5" />
+            <param name="ZEst" value="1.5" />
+            <param name="TEst" value="1.5" />
+            <param name="VR" value="230.0 [kV]" />
+            <param name="MVA" value="100.0 [MVA]" />
+            <param name="RPUP" value=".336786E-7 [pu/m]" />
+            <param name="XLPUP" value=".593346E-6 [pu/m]" />
+            <param name="XCPUP" value=".517098E6 [pu*m]" />
+            <param name="RPUZ" value=".558072E-6 [pu/m]" />
+            <param name="XLPUZ" value=".196578E-5 [pu/m]" />
+            <param name="XCPUZ" value=".782919E6 [pu*m]" />
+            <param name="Rp" value="0.3110 [ohm/m]" />
+            <param name="Xp" value="0.4185 [ohm/m]" />
+            <param name="Bp" value="0.1050 [Mohm*m]" />
+            <param name="Rz" value="0.9333 [ohm/m]" />
+            <param name="Xz" value="1.2554 [ohm/m]" />
+            <param name="Bz" value="0.0525 [Mohm*m]" />
+            <param name="RTP" value=".1781598E-4 [ohm/m]" />
+            <param name="TTP" value=".2841427 [ms]" />
+            <param name="ZTP" value="293.0192 [ohm]" />
+            <param name="RTZ" value=".2952201E-3 [ohm/m]" />
+            <param name="TTZ" value=".4203179 [ms]" />
+            <param name="ZTZ" value="656.2685 [ohm]" />
+            <param name="VR2" value="34.5 [kV]" />
+            <param name="MVA2" value="100.0 [MVA]" />
+            <param name="RPUP2" value="0.0063 [pu/m]" />
+            <param name="XLPUP2" value="0.0040 [pu/m]" />
+            <param name="BPUP2" value="0.000222 [pu/m]" />
+            <param name="RPUZ2" value="0.00113 [pu/m]" />
+            <param name="XLPUZ2" value="0.0029 [pu/m]" />
+            <param name="BPUZ2" value="0.000225 [pu/m]" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:newpi" id="152276174" x="1386" y="828" w="110" h="18" z="1" orient="4" defn="master:newpi" link="-1" q="4">
+          <paramlist link="-1" name="">
+            <param name="Name" value="Line1" />
+            <param name="PU" value="3" />
+            <param name="Config" value="1" />
+            <param name="F" value="60.0 [Hz]" />
+            <param name="len" value="1 [m]" />
+            <param name="Estim" value="0" />
+            <param name="View" value="2" />
+            <param name="REst" value="1.5" />
+            <param name="ZEst" value="1.5" />
+            <param name="TEst" value="1.5" />
+            <param name="VR" value="230.0 [kV]" />
+            <param name="MVA" value="100.0 [MVA]" />
+            <param name="RPUP" value=".336786E-7 [pu/m]" />
+            <param name="XLPUP" value=".593346E-6 [pu/m]" />
+            <param name="XCPUP" value=".517098E6 [pu*m]" />
+            <param name="RPUZ" value=".558072E-6 [pu/m]" />
+            <param name="XLPUZ" value=".196578E-5 [pu/m]" />
+            <param name="XCPUZ" value=".782919E6 [pu*m]" />
+            <param name="Rp" value="0.3110 [ohm/m]" />
+            <param name="Xp" value="0.4185 [ohm/m]" />
+            <param name="Bp" value="0.1050 [Mohm*m]" />
+            <param name="Rz" value="0.9333 [ohm/m]" />
+            <param name="Xz" value="1.2554 [ohm/m]" />
+            <param name="Bz" value="0.0525 [Mohm*m]" />
+            <param name="RTP" value=".1781598E-4 [ohm/m]" />
+            <param name="TTP" value=".2841427 [ms]" />
+            <param name="ZTP" value="293.0192 [ohm]" />
+            <param name="RTZ" value=".2952201E-3 [ohm/m]" />
+            <param name="TTZ" value=".4203179 [ms]" />
+            <param name="ZTZ" value="656.2685 [ohm]" />
+            <param name="VR2" value="34.5 [kV]" />
+            <param name="MVA2" value="100.0 [MVA]" />
+            <param name="RPUP2" value="0.0179 [pu/m]" />
+            <param name="XLPUP2" value="0.0063 [pu/m]" />
+            <param name="BPUP2" value="0.000248 [pu/m]" />
+            <param name="RPUZ2" value="0.00320 [pu/m]" />
+            <param name="XLPUZ2" value="0.0033 [pu/m]" />
+            <param name="BPUZ2" value="0.000250 [pu/m]" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:newpi" id="435501420" x="1530" y="828" w="110" h="18" z="1" orient="4" defn="master:newpi" link="-1" q="4">
+          <paramlist link="-1" name="">
+            <param name="Name" value="Line1" />
+            <param name="PU" value="3" />
+            <param name="Config" value="1" />
+            <param name="F" value="60.0 [Hz]" />
+            <param name="len" value="1 [m]" />
+            <param name="Estim" value="0" />
+            <param name="View" value="2" />
+            <param name="REst" value="1.5" />
+            <param name="ZEst" value="1.5" />
+            <param name="TEst" value="1.5" />
+            <param name="VR" value="230.0 [kV]" />
+            <param name="MVA" value="100.0 [MVA]" />
+            <param name="RPUP" value=".336786E-7 [pu/m]" />
+            <param name="XLPUP" value=".593346E-6 [pu/m]" />
+            <param name="XCPUP" value=".517098E6 [pu*m]" />
+            <param name="RPUZ" value=".558072E-6 [pu/m]" />
+            <param name="XLPUZ" value=".196578E-5 [pu/m]" />
+            <param name="XCPUZ" value=".782919E6 [pu*m]" />
+            <param name="Rp" value="0.3110 [ohm/m]" />
+            <param name="Xp" value="0.4185 [ohm/m]" />
+            <param name="Bp" value="0.1050 [Mohm*m]" />
+            <param name="Rz" value="0.9333 [ohm/m]" />
+            <param name="Xz" value="1.2554 [ohm/m]" />
+            <param name="Bz" value="0.0525 [Mohm*m]" />
+            <param name="RTP" value=".1781598E-4 [ohm/m]" />
+            <param name="TTP" value=".2841427 [ms]" />
+            <param name="ZTP" value="293.0192 [ohm]" />
+            <param name="RTZ" value=".2952201E-3 [ohm/m]" />
+            <param name="TTZ" value=".4203179 [ms]" />
+            <param name="ZTZ" value="656.2685 [ohm]" />
+            <param name="VR2" value="34.5 [kV]" />
+            <param name="MVA2" value="100.0 [MVA]" />
+            <param name="RPUP2" value="0.0090 [pu/m]" />
+            <param name="XLPUP2" value="0.0032 [pu/m]" />
+            <param name="BPUP2" value="0.000125 [pu/m]" />
+            <param name="RPUZ2" value="0.0161 [pu/m]" />
+            <param name="XLPUZ2" value="0.0033 [pu/m]" />
+            <param name="BPUZ2" value="0.000126 [pu/m]" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:newpi" id="1744270797" x="1674" y="828" w="110" h="18" z="1" orient="4" defn="master:newpi" link="-1" q="4">
+          <paramlist link="-1" name="">
+            <param name="Name" value="Line1" />
+            <param name="PU" value="3" />
+            <param name="Config" value="1" />
+            <param name="F" value="60.0 [Hz]" />
+            <param name="len" value="1 [m]" />
+            <param name="Estim" value="0" />
+            <param name="View" value="2" />
+            <param name="REst" value="1.5" />
+            <param name="ZEst" value="1.5" />
+            <param name="TEst" value="1.5" />
+            <param name="VR" value="230.0 [kV]" />
+            <param name="MVA" value="100.0 [MVA]" />
+            <param name="RPUP" value=".336786E-7 [pu/m]" />
+            <param name="XLPUP" value=".593346E-6 [pu/m]" />
+            <param name="XCPUP" value=".517098E6 [pu*m]" />
+            <param name="RPUZ" value=".558072E-6 [pu/m]" />
+            <param name="XLPUZ" value=".196578E-5 [pu/m]" />
+            <param name="XCPUZ" value=".782919E6 [pu*m]" />
+            <param name="Rp" value="0.3110 [ohm/m]" />
+            <param name="Xp" value="0.4185 [ohm/m]" />
+            <param name="Bp" value="0.1050 [Mohm*m]" />
+            <param name="Rz" value="0.9333 [ohm/m]" />
+            <param name="Xz" value="1.2554 [ohm/m]" />
+            <param name="Bz" value="0.0525 [Mohm*m]" />
+            <param name="RTP" value=".1781598E-4 [ohm/m]" />
+            <param name="TTP" value=".2841427 [ms]" />
+            <param name="ZTP" value="293.0192 [ohm]" />
+            <param name="RTZ" value=".2952201E-3 [ohm/m]" />
+            <param name="TTZ" value=".4203179 [ms]" />
+            <param name="ZTZ" value="656.2685 [ohm]" />
+            <param name="VR2" value="34.5 [kV]" />
+            <param name="MVA2" value="100.0 [MVA]" />
+            <param name="RPUP2" value="0.0090 [pu/m]" />
+            <param name="XLPUP2" value="0.0032 [pu/m]" />
+            <param name="BPUP2" value="0.000125 [pu/m]" />
+            <param name="RPUZ2" value="0.0161 [pu/m]" />
+            <param name="XLPUZ2" value="0.0033 [pu/m]" />
+            <param name="BPUZ2" value="0.000126 [pu/m]" />
+          </paramlist>
+        </User>
+        <Wire classid="WireOrthogonal" id="571228346" name="" x="828" y="828" w="62" h="8" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="54" y="0" />
+        </Wire>
+        <User classid="UserCmp" name="master:newpi" id="1842237417" x="1800" y="828" w="110" h="18" z="1" orient="4" defn="master:newpi" link="-1" q="4">
+          <paramlist link="-1" name="">
+            <param name="Name" value="Line1" />
+            <param name="PU" value="3" />
+            <param name="Config" value="1" />
+            <param name="F" value="60.0 [Hz]" />
+            <param name="len" value="1 [m]" />
+            <param name="Estim" value="0" />
+            <param name="View" value="2" />
+            <param name="REst" value="1.5" />
+            <param name="ZEst" value="1.5" />
+            <param name="TEst" value="1.5" />
+            <param name="VR" value="230.0 [kV]" />
+            <param name="MVA" value="100.0 [MVA]" />
+            <param name="RPUP" value=".336786E-7 [pu/m]" />
+            <param name="XLPUP" value=".593346E-6 [pu/m]" />
+            <param name="XCPUP" value=".517098E6 [pu*m]" />
+            <param name="RPUZ" value=".558072E-6 [pu/m]" />
+            <param name="XLPUZ" value=".196578E-5 [pu/m]" />
+            <param name="XCPUZ" value=".782919E6 [pu*m]" />
+            <param name="Rp" value="0.3110 [ohm/m]" />
+            <param name="Xp" value="0.4185 [ohm/m]" />
+            <param name="Bp" value="0.1050 [Mohm*m]" />
+            <param name="Rz" value="0.9333 [ohm/m]" />
+            <param name="Xz" value="1.2554 [ohm/m]" />
+            <param name="Bz" value="0.0525 [Mohm*m]" />
+            <param name="RTP" value=".1781598E-4 [ohm/m]" />
+            <param name="TTP" value=".2841427 [ms]" />
+            <param name="ZTP" value="293.0192 [ohm]" />
+            <param name="RTZ" value=".2952201E-3 [ohm/m]" />
+            <param name="TTZ" value=".4203179 [ms]" />
+            <param name="ZTZ" value="656.2685 [ohm]" />
+            <param name="VR2" value="34.5 [kV]" />
+            <param name="MVA2" value="100.0 [MVA]" />
+            <param name="RPUP2" value="0.0209 [pu/m]" />
+            <param name="XLPUP2" value="0.0074 [pu/m]" />
+            <param name="BPUP2" value="0.000288 [pu/m]" />
+            <param name="RPUZ2" value="0.0373 [pu/m]" />
+            <param name="XLPUZ2" value="0.0077 [pu/m]" />
+            <param name="BPUZ2" value="0.000291 [pu/m]" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:newpi" id="1605562948" x="1944" y="828" w="110" h="18" z="1" orient="4" defn="master:newpi" link="-1" q="4">
+          <paramlist link="-1" name="">
+            <param name="Name" value="Line1" />
+            <param name="PU" value="3" />
+            <param name="Config" value="1" />
+            <param name="F" value="60.0 [Hz]" />
+            <param name="len" value="1 [m]" />
+            <param name="Estim" value="0" />
+            <param name="View" value="2" />
+            <param name="REst" value="1.5" />
+            <param name="ZEst" value="1.5" />
+            <param name="TEst" value="1.5" />
+            <param name="VR" value="230.0 [kV]" />
+            <param name="MVA" value="100.0 [MVA]" />
+            <param name="RPUP" value=".336786E-7 [pu/m]" />
+            <param name="XLPUP" value=".593346E-6 [pu/m]" />
+            <param name="XCPUP" value=".517098E6 [pu*m]" />
+            <param name="RPUZ" value=".558072E-6 [pu/m]" />
+            <param name="XLPUZ" value=".196578E-5 [pu/m]" />
+            <param name="XCPUZ" value=".782919E6 [pu*m]" />
+            <param name="Rp" value="0.3110 [ohm/m]" />
+            <param name="Xp" value="0.4185 [ohm/m]" />
+            <param name="Bp" value="0.1050 [Mohm*m]" />
+            <param name="Rz" value="0.9333 [ohm/m]" />
+            <param name="Xz" value="1.2554 [ohm/m]" />
+            <param name="Bz" value="0.0525 [Mohm*m]" />
+            <param name="RTP" value=".1781598E-4 [ohm/m]" />
+            <param name="TTP" value=".2841427 [ms]" />
+            <param name="ZTP" value="293.0192 [ohm]" />
+            <param name="RTZ" value=".2952201E-3 [ohm/m]" />
+            <param name="TTZ" value=".4203179 [ms]" />
+            <param name="ZTZ" value="656.2685 [ohm]" />
+            <param name="VR2" value="34.5 [kV]" />
+            <param name="MVA2" value="100.0 [MVA]" />
+            <param name="RPUP2" value="0.0090 [pu/m]" />
+            <param name="XLPUP2" value="0.0032 [pu/m]" />
+            <param name="BPUP2" value="0.000125 [pu/m]" />
+            <param name="RPUZ2" value="0.0161 [pu/m]" />
+            <param name="XLPUZ2" value="0.0033 [pu/m]" />
+            <param name="BPUZ2" value="0.000126 [pu/m]" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:newpi" id="1042726043" x="2088" y="828" w="110" h="18" z="1" orient="4" defn="master:newpi" link="-1" q="4">
+          <paramlist link="-1" name="">
+            <param name="Name" value="Line1" />
+            <param name="PU" value="3" />
+            <param name="Config" value="1" />
+            <param name="F" value="60.0 [Hz]" />
+            <param name="len" value="1 [m]" />
+            <param name="Estim" value="0" />
+            <param name="View" value="2" />
+            <param name="REst" value="1.5" />
+            <param name="ZEst" value="1.5" />
+            <param name="TEst" value="1.5" />
+            <param name="VR" value="230.0 [kV]" />
+            <param name="MVA" value="100.0 [MVA]" />
+            <param name="RPUP" value=".336786E-7 [pu/m]" />
+            <param name="XLPUP" value=".593346E-6 [pu/m]" />
+            <param name="XCPUP" value=".517098E6 [pu*m]" />
+            <param name="RPUZ" value=".558072E-6 [pu/m]" />
+            <param name="XLPUZ" value=".196578E-5 [pu/m]" />
+            <param name="XCPUZ" value=".782919E6 [pu*m]" />
+            <param name="Rp" value="0.3110 [ohm/m]" />
+            <param name="Xp" value="0.4185 [ohm/m]" />
+            <param name="Bp" value="0.1050 [Mohm*m]" />
+            <param name="Rz" value="0.9333 [ohm/m]" />
+            <param name="Xz" value="1.2554 [ohm/m]" />
+            <param name="Bz" value="0.0525 [Mohm*m]" />
+            <param name="RTP" value=".1781598E-4 [ohm/m]" />
+            <param name="TTP" value=".2841427 [ms]" />
+            <param name="ZTP" value="293.0192 [ohm]" />
+            <param name="RTZ" value=".2952201E-3 [ohm/m]" />
+            <param name="TTZ" value=".4203179 [ms]" />
+            <param name="ZTZ" value="656.2685 [ohm]" />
+            <param name="VR2" value="34.5 [kV]" />
+            <param name="MVA2" value="100.0 [MVA]" />
+            <param name="RPUP2" value="0.0090 [pu/m]" />
+            <param name="XLPUP2" value="0.0032 [pu/m]" />
+            <param name="BPUP2" value="0.000125 [pu/m]" />
+            <param name="RPUZ2" value="0.0161 [pu/m]" />
+            <param name="XLPUZ2" value="0.0033 [pu/m]" />
+            <param name="BPUZ2" value="0.000126 [pu/m]" />
+          </paramlist>
+        </User>
+        <Wire classid="WireOrthogonal" id="1984220962" name="" x="990" y="828" w="44" h="8" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="36" y="0" />
+        </Wire>
+        <Wire classid="WireOrthogonal" id="376410922" name="" x="1134" y="828" w="44" h="8" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="36" y="0" />
+        </Wire>
+        <Wire classid="WireOrthogonal" id="2083063067" name="" x="1278" y="828" w="44" h="8" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="36" y="0" />
+        </Wire>
+        <Wire classid="WireOrthogonal" id="1403938741" name="" x="1422" y="828" w="44" h="8" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="36" y="0" />
+        </Wire>
+        <Wire classid="WireOrthogonal" id="186752509" name="" x="1566" y="828" w="44" h="8" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="36" y="0" />
+        </Wire>
+        <Wire classid="WireOrthogonal" id="517085688" name="" x="1710" y="828" w="26" h="8" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="18" y="0" />
+        </Wire>
+        <Wire classid="WireOrthogonal" id="999039322" name="" x="1836" y="828" w="44" h="8" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="36" y="0" />
+        </Wire>
+        <Wire classid="WireOrthogonal" id="1189240112" name="" x="1980" y="828" w="44" h="8" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="36" y="0" />
+        </Wire>
+        <User classid="UserCmp" name="master:newpi" id="698489987" x="198" y="828" w="110" h="18" z="1" orient="4" defn="master:newpi" link="-1" q="4">
+          <paramlist link="-1" name="">
+            <param name="Name" value="Line1" />
+            <param name="PU" value="3" />
+            <param name="Config" value="1" />
+            <param name="F" value="60.0 [Hz]" />
+            <param name="len" value="1 [m]" />
+            <param name="Estim" value="0" />
+            <param name="View" value="2" />
+            <param name="REst" value="1.5" />
+            <param name="ZEst" value="1.5" />
+            <param name="TEst" value="1.5" />
+            <param name="VR" value="230.0 [kV]" />
+            <param name="MVA" value="100.0 [MVA]" />
+            <param name="RPUP" value=".336786E-7 [pu/m]" />
+            <param name="XLPUP" value=".593346E-6 [pu/m]" />
+            <param name="XCPUP" value=".517098E6 [pu*m]" />
+            <param name="RPUZ" value=".558072E-6 [pu/m]" />
+            <param name="XLPUZ" value=".196578E-5 [pu/m]" />
+            <param name="XCPUZ" value=".782919E6 [pu*m]" />
+            <param name="Rp" value="0.3110 [ohm/m]" />
+            <param name="Xp" value="0.4185 [ohm/m]" />
+            <param name="Bp" value="0.1050 [Mohm*m]" />
+            <param name="Rz" value="0.9333 [ohm/m]" />
+            <param name="Xz" value="1.2554 [ohm/m]" />
+            <param name="Bz" value="0.0525 [Mohm*m]" />
+            <param name="RTP" value=".1781598E-4 [ohm/m]" />
+            <param name="TTP" value=".2841427 [ms]" />
+            <param name="ZTP" value="293.0192 [ohm]" />
+            <param name="RTZ" value=".2952201E-3 [ohm/m]" />
+            <param name="TTZ" value=".4203179 [ms]" />
+            <param name="ZTZ" value="656.2685 [ohm]" />
+            <param name="VR2" value="34.5 [kV]" />
+            <param name="MVA2" value="100.0 [MVA]" />
+            <param name="RPUP2" value="0.0049 [pu/m]" />
+            <param name="XLPUP2" value="0.0066 [pu/m]" />
+            <param name="BPUP2" value="0.000634 [pu/m]" />
+            <param name="RPUZ2" value="0.0155 [pu/m]" />
+            <param name="XLPUZ2" value="0.0049 [pu/m]" />
+            <param name="BPUZ2" value="0.000639 [pu/m]" />
+          </paramlist>
+        </User>
+        <Wire classid="WireOrthogonal" id="968945098" name="" x="270" y="828" w="44" h="8" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="-36" y="0" />
+        </Wire>
+        <Wire classid="WireOrthogonal" id="1495878927" name="" x="2232" y="648" w="8" h="26" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="0" y="18" />
+        </Wire>
+        <User classid="UserCmp" name="master:xfmr-3p2w" id="174958277" x="2232" y="720" w="56" h="92" z="1" orient="7" defn="master:xfmr-3p2w" link="-1" q="4">
+          <paramlist link="-1" name="">
+            <param name="Name" value="T32" />
+            <param name="Tmva" value="25.9 [MVA]" />
+            <param name="f" value="60.0 [Hz]" />
+            <param name="YD1" value="0" />
+            <param name="YD2" value="1" />
+            <param name="Lead" value="1" />
+            <param name="Xl" value="0.0578 [pu]" />
+            <param name="Ideal" value="0" />
+            <param name="NLL" value="0.0 [pu]" />
+            <param name="CuL" value="0.0064 [pu]" />
+            <param name="Tap" value="0" />
+            <param name="View" value="1" />
+            <param name="Dtls" value="0" />
+            <param name="V1" value="0.418 [kV]" />
+            <param name="V2" value="34.5 [kV]" />
+            <param name="Enab" value="0" />
+            <param name="Sat" value="1" />
+            <param name="Xair" value="0.2 [pu]" />
+            <param name="Tdc" value="1 [s]" />
+            <param name="Xknee" value="1.25 [pu]" />
+            <param name="Txk" value="0.1 [s]" />
+            <param name="Im1" value="0.4 [%]" />
+            <param name="ILA1" value="" />
+            <param name="ILB1" value="" />
+            <param name="ILC1" value="" />
+            <param name="IAB1" value="Iab1" />
+            <param name="IBC1" value="Ibc1" />
+            <param name="ICA1" value="Ica1" />
+            <param name="ILA2" value="" />
+            <param name="ILB2" value="" />
+            <param name="ILC2" value="" />
+            <param name="IAB2" value="" />
+            <param name="IBC2" value="" />
+            <param name="ICA2" value="" />
+            <param name="IMA" value="" />
+            <param name="IMB" value="" />
+            <param name="IMC" value="" />
+            <param name="FLXA" value="" />
+            <param name="FLXB" value="" />
+            <param name="FLXC" value="" />
+            <param name="IMAB" value="" />
+            <param name="IMBC" value="" />
+            <param name="IMCA" value="" />
+            <param name="FLXAB" value="" />
+            <param name="FLXBC" value="" />
+            <param name="FLXCA" value="" />
+            <param name="Hys" value="0" />
+            <param name="Fremn1" value="0.0" />
+            <param name="Fremn2" value="0.0" />
+            <param name="Fremn3" value="0.0" />
+            <param name="LW2" value="10" />
+            <param name="Bnom" value="1.7" />
+            <param name="material" value="1" />
+            <param name="C" value="0.1" />
+            <param name="K" value="5.0e-5" />
+            <param name="BETA" value="0.96" />
+            <param name="alpha" value="1.325e-5" />
+            <param name="Msat" value="1.72e6" />
+            <param name="F1" value="2730" />
+            <param name="F2" value="3209" />
+            <param name="F3" value="20294" />
+            <param name="Fb" value="2" />
+            <param name="HA1" value="" />
+            <param name="HB1" value="" />
+            <param name="HC1" value="" />
+            <param name="BA1" value="" />
+            <param name="BB1" value="" />
+            <param name="BC1" value="" />
+            <param name="HAB1" value="" />
+            <param name="HBC1" value="" />
+            <param name="HCA1" value="" />
+            <param name="BAB1" value="" />
+            <param name="BBC1" value="" />
+            <param name="BCA1" value="" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:ground" id="313450389" x="2286" y="702" w="26" h="20" z="0" orient="6" defn="master:ground" link="-1" q="4">
+          <paramlist link="-1" name="" />
+        </User>
+        <Wire classid="WireOrthogonal" id="1026011884" name="" x="2286" y="702" w="26" h="8" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="-18" y="0" />
+        </Wire>
+      </schematic>
+      <references>
+        <using namespace="master" />
+      </references>
+    </Definition>
+  </definitions>
+</project>

@@ -178,17 +178,18 @@ With more solar photovoltaic (PV) farms coming online around the world,
  special system studies are needed.
  One of these studies is Transient Overvoltage (TOV) study.
  The main purpose of a TOV study is evaluating the capability of the surge
- arresters selected in the preliminary design of the project.
- To assess the capability of surge arresters accurately, a detailed electromagne
-tic transient (EMT) model of the project has to be built.
+ arresters selected in the preliminary design stage of the project.
+ To assess the capability of the surge arresters accurately, a detailed
+ electromagnetic transient (EMT) model of the project has to be built.
  With the detailed EMT model of a large number of inverters included, the
  run time of the model becomes prohibitive even for a single scenario.
  In this paper, we propose a method to systematically reduce the order of
- the EMT model making the model suitable for TOV studies.
+ the EMT model thus making the model suitable for TOV studies at the substation
+ level.
  The reduced order model response is then benchmarked against the response
  of full order model for various TOV scenarios.
- Simulations show identical or near to identical responses between the two
- models.
+ Simulation results show identical or near to identical agreement between
+ the response of the detailed and the reduced order model.
  Additionally, the run time of the proposed reduced model is less than the
  run time of the full order model by a factor of ninety six.
  
@@ -308,130 +309,8 @@ First appendix
 \end_layout
 
 \begin_layout Standard
-Citation: 
-\begin_inset CommandInset citation
-LatexCommand citet
-key "IEEEexample:beebe_archive"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 This section will probably contain generic modeling information.
  
-\end_layout
-
-\begin_layout Section*
-Acknowlegment
-\end_layout
-
-\begin_layout Standard
-bla bla
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Remember though that your final submission is supposed to have all the bibliogra
-phy entries embedded in the \SpecialChar LaTeX
--file.
- This means you eventually have to copy the .bbl file into the latex file
- and remove the bibtex lines.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset bibtex
-LatexCommand bibtex
-bibfiles "IEEEabrv,IEEEexample"
-options "IEEEtran"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Biography
-\begin_inset Argument 1
-status open
-
-\begin_layout Plain Layout
-\begin_inset Box Boxed
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "1in"
-special "none"
-height "1.25in"
-height_special "none"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
-status open
-
-\begin_layout Plain Layout
-Replace this box by an image with a width of 1
-\begin_inset space \thinspace{}
-\end_inset
-
-in and a height of 1.25
-\begin_inset space \thinspace{}
-\end_inset
-
-in!
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset Argument 2
-status open
-
-\begin_layout Plain Layout
-Your Name
-\end_layout
-
-\end_inset
-
- All about you and the what your interests are.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Biography without photo
-\begin_inset Argument 1
-status open
-
-\begin_layout Plain Layout
-Coauthor
-\end_layout
-
-\end_inset
-
-Same again for the co-author, but without photo
 \end_layout
 
 \end_body
