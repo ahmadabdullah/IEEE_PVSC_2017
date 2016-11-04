@@ -8,8 +8,6 @@
 \begin_preamble
 % for subfigures/subtables
 \usepackage[caption=false,font=footnotesize]{subfig}
-%\newref{fig}{name = \RSFigtxt}
-%\newref{tab}{name = \RSTabtxt}
 \end_preamble
 \options conference
 \use_default_options false
@@ -176,23 +174,23 @@ e-mail: byancey@epeconsulting.com
 \end_layout
 
 \begin_layout Abstract
-Special system studies are needed to assess the different preliminary designs
- of solar photovoltaic (PV) farms.
+With more solar photovoltaic (PV) farms coming online around the world,
+ special system studies are needed.
  One of these studies is Temporary Overvoltage (TOV) study.
  The main purpose of a TOV study is evaluating the capability of the surge
- arresters (SAs) within the substation.
+ arresters (SAs) within the substation selected at the preliminary design
+ stage of the project.
  To assess the capability of the surge arresters accurately, a detailed
  electromagnetic transient (EMT) model of the project has to be built.
- With the detailed EMT model, which has a large number of inverters, the
+ With the detailed EMT model of a large number of inverters included, the
  run time of the model becomes prohibitive even for a single scenario.
  In this paper, we propose a method to systematically reduce the order of
- the EMT model at the substation level thus making the model suitable for
- TOV studies.
- The response of the reduced order model is then benchmarked against the
- response of the full order model of an 80 MW solar PV farm for various
- TOV scenarios.
- Simulation results show satisfactory agreement between the response of
- the detailed model and the response of reduced order model.
+ the EMT model thus making the model suitable for TOV studies at the substation
+ level.
+ The reduced order model response is then benchmarked against the response
+ of full order model for various TOV scenarios.
+ Simulation results show near-to identical agreement between the response
+ of the detailed model and the response of reduced order model.
  Additionally, the run time of the proposed reduced model is less than the
  run time of the full order model by a factor of ninety six.
  
@@ -210,9 +208,27 @@ name "sec:Introduction"
 \end_layout
 
 \begin_layout Standard
-With the increased penetration of renewable energy into the grid, special
- system studies are called upon to assess their impact on various aspects
- of the power system.
+\begin_inset Flex Paragraph Start
+status open
+
+\begin_layout Plain Layout
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+W
+\end_layout
+
+\end_inset
+
+ith
+\end_layout
+
+\end_inset
+
+the increased penetration of renewable energy into the grid, special system
+ studies are called upon to assess their impact on various aspects of the
+ power system.
  One of these aspects is evaluating the adequacy the of surge arresters
  within the substation.
  Surge arrester MCOV and energy handling capability are generally selected
@@ -288,14 +304,12 @@ key "6093926"
 This necessitates a paradigm shift in performing TOV studies.
  Building the renewable energy project in an EMT type software becomes a
  must to assess the performance of SAs under various scenarios.
- The model must have all inverters as well as all SAs characteristics accurately.
  Running such models in EMT software requires small solution time step and
  thus a long simulation run time.
  Moreover, performing many TOV scenarios becomes a daunting task due to
  the long simulation run time.
  Thus, it is of utmost importance to develop a method to reduce the total
- number of switches (inverters) in the model to reduce the simulation run
- time.
+ number of switches in the model to reduce the simulation run time.
  
 \end_layout
 
@@ -330,17 +344,16 @@ In this paper, we provide a way to reduce the order of the solar PV project
  at the substation level.
  Each feeder of the collector system is reduced on its own to a simple generatio
 n resource and an impedance.
- Thus the number of the inverters in the EMT model is drastically reduced
- to the number of the feeders in the collector system.
+ Thus the number of the inverters in the EMT is drastically reduced to the
+ number of the feeders in the system.
  It thus possible to study the performance of the SAs in the substation
- since they, generally, are installed at the beginning of each of these
- collector feeders.
+ since they are installed at the beginning of each of these collector feeders.
  
 \end_layout
 
 \begin_layout Standard
 The paper is organized as follows.
- The detailed system EMT model is described in 
+ The full system EMT model is described in 
 \begin_inset CommandInset ref
 LatexCommand formatted
 reference "sec:Full-System-Mode"
@@ -356,8 +369,7 @@ reference "sec:Inverter-Benchmark-Tests"
 
 \end_inset
 
-.
- The methodology is provided in 
+.The methodology is provided in 
 \begin_inset CommandInset ref
 LatexCommand formatted
 reference "sec:Methodology"
@@ -365,8 +377,8 @@ reference "sec:Methodology"
 \end_inset
 
 .
- The TOV scenarios used for comparing the detailed and reduced order model
- is provided in 
+ The TOV scenarios used for comparing the full and reduced order model is
+ provided in 
 \begin_inset CommandInset ref
 LatexCommand formatted
 reference "sec:Scenarios"
@@ -382,7 +394,7 @@ reference "sec:Results"
 \end_inset
 
 .
- Conclusions are summarized in 
+ Conclusions are offered in 
 \begin_inset CommandInset ref
 LatexCommand formatted
 reference "sec:Conclusions"
@@ -393,7 +405,7 @@ reference "sec:Conclusions"
 \end_layout
 
 \begin_layout Section
-Detailed System Model
+Full System Model
 \begin_inset CommandInset label
 LatexCommand label
 name "sec:Full-System-Mode"
@@ -543,9 +555,8 @@ reference "fig:Full-Order-EMT-Model"
 \end_inset
 
 .
- All surge arresters at the medium voltage level are MOV type, have the
- same MCOV of 24.4 kv and have the same energy handling capability of 219
- kJ.
+ All surge arresters at the medium voltage level are MOV type and have the
+ same MCOV and energy handling capability.
  The V-I characteristics of the surge arresters are obtained from 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -579,7 +590,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Voltage-Current (V-I) Characteristics of the MV surge arrester
+Voltage-Current (V-I) Characteristics of the medium voltage arrester
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Voltage-Current-(V-I)-Characteri"
@@ -635,8 +646,8 @@ reference "sec:Introduction"
 
 \end_inset
 
-, the inverter response in fundamentally different from conventional synchronous
- machines.
+, the inverter response in fundamentally different from conversational synchrono
+us machines.
  To be able to successfully reduce the order of the model and design the
  benchmark scenarios in 
 \begin_inset CommandInset ref
@@ -645,8 +656,8 @@ reference "sec:Scenarios"
 
 \end_inset
 
-, the response of the inverter under specific tests has to be known.
- The inverter manufacturer supplied two benchmark tests.
+, the response of the inverter under specific scenarios has to be known.
+ The manufacturer supplied two benchmark cases.
  The first one is a load rejection test in 
 \begin_inset CommandInset ref
 LatexCommand formatted
@@ -663,7 +674,7 @@ reference "fig:Phase-A-to"
 
 .
  The fault is performed at the inverter terminals with the ISU transformer
- terminals connected to a infinite bus.
+ terminals connected to a stiff grid.
  It can be seen from both 
 \begin_inset CommandInset ref
 LatexCommand formatted
@@ -699,7 +710,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Load rejection test (upper curve is voltage - lower curve is current)
+Load rejection test
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Load-reject-test"
@@ -785,7 +796,7 @@ key "watson2003power,bobrow1997elementary"
 , the inverters within the solar PV project can be modeled as such depending
  on the technology used within the inverter.
  However, most manufacturers of solar PV inverters use a technology that
- makes the inverters act as a current source or a voltage controlled current
+ make the inverters act as a current source or a voltage controlled current
  source.
  Due to that, Norton's equivalent model would be most suitable.
  A Norton's equivalent consists of two parts: the Norton's current source
@@ -794,7 +805,7 @@ key "watson2003power,bobrow1997elementary"
 \end_layout
 
 \begin_layout Standard
-The basic idea behind the method in this paper is to represent each feeder
+The Basic idea behind the method in this paper is to represent each feeder
  by a pseudo-Norton's equivalent.
  The pseudo-Norton's equivalent will consist of two parts: a pseudo-Norton
  source and an impedance in parallel.
@@ -803,10 +814,10 @@ The basic idea behind the method in this paper is to represent each feeder
  be equivalencing the high frequency response of the feeder.
  This effectively means that the step response of the pseudo-Norton's source
  should correspond to the low frequency response portion of the overall
- feeder frequency response.
+ feeder response.
  This also means that the step response of the impedance in parallel should
  correspond to the high frequency response portion of the overall feeder
- frequency response.
+ response.
  The construction of the pseudo-Norton's source is provided in 
 \begin_inset CommandInset ref
 LatexCommand formatted
@@ -848,7 +859,7 @@ key "inzunza20056"
 
 \end_inset
 
- technology, but this is outside the scope of this paper.
+ technology but this is outside the scope of this paper.
  The validity of the current methodology is yet to be investigated under
  transformerless technology.
  
@@ -866,7 +877,7 @@ To construct the pseudo-Norton's source, the inverter MVA rating must be
  to be scaled up by the number of inverters.
  Lastly, the ISU transformer MVA rating is also to be scaled up by a factor
  equal to the number of inverters without changing the per unit impedance
- of the ISU transformer.
+ of the ISA transformer.
  
 \end_layout
 
@@ -901,13 +912,13 @@ It is necessary that the parallel impedance represents the high frequency
  feeder.
  Thus the cable sections along the feeder has to be modeled by a suitable
  frequency dependent model.
- The user has two choices:
+ The user then has two choices:
 \end_layout
 
 \begin_layout Enumerate
 Either do a frequency scan on the feeder with all inverters removed from
- the project (ISU transformers have to be open-circuited as well as the
- feeder breaker).
+ the project (transformer has to be open circuited as well as the feeder
+ breaker).
  Using that frequency scan, the user can use vector fitting 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -915,7 +926,7 @@ key "gustavsen1999rational,morched1983transmission"
 
 \end_inset
 
- to construct a frequency dependent model.
+to construct a frequency dependent model.
  Passivity has to be enforced upon the resulting fitting by insuring that
  negative resistance is not a result of the fitting.
  Negative resistance causes instability in the EMT simulations.
@@ -930,18 +941,18 @@ Keep the feeder intact without performing a vector fitting.
 \end_layout
 
 \begin_layout Standard
-Theoretically, both methods should represent the same impedance.
- The first choice above can be done very quickly in PSCAD/EMTDC.
+Theoretically, both methods should represent the same impedance, i.e., .
+ Method 1 above can be done very quickly in PSCAD/EMTDC.
  However, PSCAD/EMTDC does not enforce passivity on the resulting frequency
  dependent model.
- Due to that, the authors used the second choice and they will treat the
+ Due to that, the authors used the second method and they will treat the
  first method in a separate publication.
 \end_layout
 
 \begin_layout Standard
 The authors also noted that for the equivalencing to produce satisfactory
- results, some cable sections in feeder have to be left out from this equivalenc
-ing process.
+ results, some cable sections in feeder have to be left out in this equivalencin
+g process.
  It turned out that the first cable section has to be removed from this
  frequency dependent impedance.
  The overall reduced order model is shown in 
@@ -1002,7 +1013,7 @@ name "sec:Scenarios"
 \end_layout
 
 \begin_layout Standard
-A total of 52 cases (8 cases per feeder) have been used to benchmark the
+A total of 72 cases (18 cases per feeder) have been used to benchmark the
  response of the reduced order model against the full order model.
  The cases are grouped into three main categories: feeder energization,
  load rejection and faults.
@@ -1010,16 +1021,8 @@ A total of 52 cases (8 cases per feeder) have been used to benchmark the
 \end_layout
 
 \begin_layout Standard
-Since we are only interested at SA evaluation, the voltage waveform has
- been monitored at the terminal of each surge arrester.
- Current waveforms will be reported upon in a different publication.
- Circuit breakers are given close/open signal at around t=0.15 seconds.
- 
-\end_layout
-
-\begin_layout Standard
 The feeder energization cases are designed to test the validity of the construct
-ion of the parallel frequency dependent impedance.
+ion of parallel impedance.
  In these cases all inverters were offline and the feeder was initially
  de-energized.
  At certain time, the feeder breaker is closed and the response of both
@@ -1031,17 +1034,9 @@ ion of the parallel frequency dependent impedance.
 In load rejection cases, the feeder was initially energized and then the
  circuit breaker was abruptly opened.
  Load rejection cases are the most important ones as evident from the tests
- supplied by the manufacturer in 
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "sec:Inverter-Benchmark-Tests"
-
-\end_inset
-
-.
- Load rejection cases should reveal whether scaling, grouping the inverters
- and placing them after the first cable section of each feeder is a valid
- approach.
+ supplied by the manufacturer.
+ Load rejection cases should reveal whether scaling and grouping the inverters
+ at one point of the feeder is a valid approach.
 \end_layout
 
 \begin_layout Standard
@@ -1084,7 +1079,7 @@ name "tab:Benchmark-cases"
 
 
 \begin_inset Tabular
-<lyxtabular version="3" rows="23" columns="3">
+<lyxtabular version="3" rows="19" columns="3">
 <features booktabs="true" tabularvalignment="middle">
 <column alignment="left" valignment="top">
 <column alignment="left" valignment="top">
@@ -1460,7 +1455,7 @@ C4
 \begin_inset Text
 
 \begin_layout Plain Layout
-Tripping of whole project with capacitor banks ON
+Tripping of whole project with capacitor banks OFF
 \end_layout
 
 \end_inset
@@ -1525,64 +1520,6 @@ LG fault on a feeder with capacitor banks OFF
 </cell>
 </row>
 <row>
-<cell multirow="4" alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-D3
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-LL fault on a feeder with capacitor banks ON 
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell multirow="4" alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-D4
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-LL fault on a feeder with capacitor banks OFF 
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
 <cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
@@ -1596,7 +1533,7 @@ LL fault on a feeder with capacitor banks OFF
 \begin_inset Text
 
 \begin_layout Plain Layout
-D5
+D3
 \end_layout
 
 \end_inset
@@ -1625,7 +1562,7 @@ LLLG fault on a feeder with capacitor banks ON
 \begin_inset Text
 
 \begin_layout Plain Layout
-D6
+D4
 \end_layout
 
 \end_inset
@@ -1654,7 +1591,7 @@ LLLG fault on a feeder with capacitor banks OFF
 \begin_inset Text
 
 \begin_layout Plain Layout
-D7
+D5
 \end_layout
 
 \end_inset
@@ -1670,35 +1607,6 @@ LG fault at 138 kV HV substation bus with capacitor banks ON
 </cell>
 </row>
 <row>
-<cell multirow="4" alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-D8
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-LG fault at 138 kV HV substation bus with capacitor banks OFF
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
 <cell multirow="4" alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
@@ -1708,49 +1616,20 @@ LG fault at 138 kV HV substation bus with capacitor banks OFF
 
 \end_inset
 </cell>
-<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-D9
+D6
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-LLLG fault at 138 kV HV substation bus with both capacitor banks ON
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell multirow="4" alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-D10
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-LLLG fault at 138 kV HV substation bus with both capacitor banks OFF
+LLLG fault at 138 kV HV substation bus with both capacitor banks on
 \end_layout
 
 \end_inset
@@ -1789,8 +1668,7 @@ Due to paper length requirement, we will not be reporting on all of the
  of scenarios.
  Specifically, scenarios B2, C1, C2, and D1 we will be reporting upon.
  The voltage at the MV bus is measured and compared.
- It should be reminded that any switching operation happens around t=0.15
- seconds.
+ It should be noted that any switching operations happens around t=0.15 seconds.
  In all the figures below, the waveforms with dashed lines represent the
  reduced order model while waveforms with the continuous lines represent
  the full order model.
@@ -1807,7 +1685,7 @@ reference "tab:Benchmark-cases"
 
 , the response of the reduced order model has been identical to the response
  of the full order model.
- This because in the reduced order model, the feeder had been left intact
+ This because in the reduced order model, the feeder has been left intact
  as mentioned in 
 \begin_inset CommandInset ref
 LatexCommand formatted
@@ -1825,7 +1703,7 @@ reference "sec:The-impedance-in-paralel"
 For Case B scenarios, it is noted that the voltage waveforms of the reduced
  order model have more oscillations that the detailed EMT model.
  This is due to the fact that when the inverters are disturbed across the
- feeder, cable sections of the feeder act as a filter that suppresses unwanted
+ feeder, cable sections of the feeder act as a filter that filter out unwanted
  harmonics.
  However, in the reduced order model, only one cable section exists before
  the measuring point.
@@ -1846,12 +1724,12 @@ reference "fig:b2"
 \end_layout
 
 \begin_layout Standard
-For Case C scenarios and apart from the higher frequency harmonics, the
- response of reduced order model of one of the phases seems to not agree
- very well with the response of the full order model in Case C1.
- However, this disparity between the two responses causes a 15 kJ difference
- only between the calculated absorbed energy of the SAs between the detailed
- and reduced order model.
+For Case C scenarios, apart from the higher frequency harmonics, the response
+ of reduced order model of one of the phases seems to not agree very well
+ with the response of the full order model in Case C1.
+ However, this disparity between the two responses causes a 15 kJ only between
+ the calculated energy absorbed by the the arresters between the full and
+ reduced order model.
  Given that the energy handling capability of the SAs is 219 kJ, the error
  is less than 7%.
  The response of the reduced order model as well as the detailed model is
@@ -1864,10 +1742,7 @@ reference "fig:C1"
 
 .
  For Case C2, the reduced order model follows the detailed model except
- for higher frequency harmonics as in Case B scenarios.
- Only Case C1 shows such disparity and other Case C scenarios exhibit the
- same type of response as in Case B scenarios.
- 
+ for 
 \end_layout
 
 \begin_layout Standard
@@ -1880,14 +1755,12 @@ reference "fig:D1"
 
 \end_inset
 
-.
+ .
  
 \end_layout
 
 \begin_layout Standard
-All cases in this section has been focused on the response of feeder 1.
- However all other feeders exhibit the same response as feeder 1.
- In all scenarios, the run time of the full order model is 8 hours per scenario
+In all scenarios, the run time of the full order model is 8 hours per scenario
  on a workstation having 6 cores at a clock speed of 3.2 GHz and 32 GB of
  RAM.
  For the reduced order model, the simulation run time does not exceed 6
@@ -1910,7 +1783,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-34.5 kV bus three phase voltages for Case B2 for feeder 1
+34.5 kV bus three phase voltages for Case B2
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:b2"
@@ -1948,7 +1821,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-34.5 kV bus three phase voltages for Case C1 for feeder 1
+34.5 kV bus three phase voltages for Case C1 
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:C1"
@@ -1986,7 +1859,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-34.5 kV bus three phase voltages for Case C2 for feeder 1
+34.5 kV bus three phase voltages for Case C2
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:C2"
@@ -2014,6 +1887,10 @@ sideways false
 status collapsed
 
 \begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
 \begin_inset Graphics
 	filename graphics/D1.PNG
 	scale 20
@@ -2024,7 +1901,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-34.5 kV bus three phase voltages for Case D1 for feeder 1
+34.5 kV bus three phase voltages for Case D1
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:D1"
@@ -2062,24 +1939,23 @@ name "sec:Conclusions"
 \begin_layout Standard
 In this paper a systematic way of reducing the order of solar PV farms at
  the substation level has been presented.
- The method is shown to capture the response of the collector system under
- various TOV scenarios to a satisfactory accuracy.
- The reduced order model takes much less time to run as compared to the
- full order model.
- This makes it useful in analyzing a large number of scenarios without the
- need for a highly capable computer.
+ The method is shown to capture accurately the response of the collector
+ system under various TOV scenarios that may happen in the substation.
+ The method is shown to be much faster that the full order model which makes
+ it useful in analyzing a large number of scenarios without the need for
+ a highly capable computer.
  
 \end_layout
 
 \begin_layout Standard
 The analysis in this paper is only limited to the SAs in the substation.
  If the feeder have SAs at the ends of the collector system- as usually
- the case- the method here will not be applicable but another method needs
- to be used to evaluate those SAs and will be treated in a future publication.
+ the case- the method here will not be applicable but another method need
+ to be used to evaluate those SAs.
  Theoretically speaking the SAs in the substation are the ones that are
- under the most severe duty, and if those arresters can be shown to withstand
- various TOVs, then all other SAs in the project should be safe as well
- as long as they have the same capability.
+ under the most severe duty, and if those arresters pass the evaluation,
+ then all other SAs in the project should be safe as well as long as they
+ have the same capability.
  
 \end_layout
 

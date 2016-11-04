@@ -1,0 +1,104 @@
+% Encoding: UTF-8
+@article{Hussein2013,
+abstract = {This paper introduces an accurate and computationally efficient reduced-order dynamic equivalent of a Type-4–based wind power plant (WPP) for the analysis of electromagnetic transients (EMTs) in the power system external to the WPP. The proposed model significantly reduces the computational resources and the simulation run time while preserving the WPP response fidelity in the desired frequency range, e.g., 0 to 50 kHz. The proposed WPP equivalent model is composed of two parts: 1) a frequency-dependent equivalent model which represents the WPP passive component in the entire frequency range and 2) a dynamic equivalent model that represents the WPP supervisory control and the aggregated low-frequency dynamics of wind-turbine generator (WTG) units. The latter can be constructed from the: 1) dynamic generic models; 2) vendor-specific models; or 3) user-defined models. The proposed model is incorporated as a software module in the PSCAD/EMTDC environment, and its efficiency and accuracy are verified based on comparing the results with those of a detailed model. ABSTRACT FROM PUBLISHER]; Copyright of IEEE Transactions on Power Systems is the property of IEEE and its content may not be copied or emailed to multiple sites or posted to a listserv without the copyright holder's express written permission. However, users may print, download, or email articles for individual use. This abstract may be abridged. No warranty is given about the accuracy of the copy. Users should refer to the original published version of the material for the full abstract. (Copyright applies to all Abstracts.)},
+author = {Hussein, Dalia N. and Matar, Mahmoud and Iravani, Reza},
+doi = {10.1109/TPWRS.2012.2227845},
+isbn = {9781479913039},
+issn = {08858950},
+journal = {IEEE Transactions on Power Systems},
+keywords = {Collector system,dynamic equivalent,electromagnetic transients (EMTs),modeling,type-4 wind-turbine generator (WTG),vector fitting,wind farms,wind power plants (WPPs)},
+number = {3},
+pages = {3096--3104},
+title = {{A type-4 wind power plant equivalent model for the analysis of electromagnetic transients in power systems}},
+volume = {28},
+year = {2013}
+}
+
+@Misc{IEEEStd1312.1-19961996,
+  author    = {{IEEE Std 1312-1-1996}},
+  title     = {{IEEE Standard for Insulation Coordination - Definitions, Principles, and Rules}},
+  year      = {1996},
+  abstract  = {The procedure for selection of the withstand voltages for equipment phase-to-ground and phase-to-phase insulation systems is specified. A list of standard insulation levels, based on the voltage stress to which the equipment is being exposed, is also identified. This standard applies to three-phase ac systems above 15 kV.},
+  booktitle = {IEEE Power Engineering Society},
+  doi       = {10.1109/IEEESTD.2011.5754137},
+  isbn      = {1559377712},
+}
+
+@Other{EMAbreakers,
+  author = {EMA Electromechanics},
+  title  = {Combined Vacuum Substation Circuit Breaker and High-Speed Mechanically Interlocked Grounding Switch},
+  url    = {http://emaelectromechanics.com/vdhgsmi/},
+}
+
+@InProceedings{muljadi2006equivalencing,
+  author       = {Muljadi, E and Butterfield, CP and Ellis, A and Mechenbier, J and Hochheimer, J and Young, R and Miller, N and Delmerico, R and Zavadil, R and Smith, JC},
+  title        = {Equivalencing the collector system of a large wind power plant},
+  booktitle    = {2006 IEEE Power Engineering Society General Meeting},
+  year         = {2006},
+  pages        = {9--pp},
+  organization = {IEEE},
+}
+
+@Book{watson2003power,
+  title     = {Power systems electromagnetic transients simulation},
+  publisher = {Iet},
+  year      = {2003},
+  author    = {Watson, Neville and Arrillaga, Jos},
+  volume    = {39},
+}
+
+@Other{jonathanwoodworth2014,
+  author = {Jonathan Woodworth},
+  title  = {Arrester Selection Guide},
+  url    = {http://www.arresterworks.com/arresterfacts/pdf_files/Arrester_Characteristics_for_ATPDraw_Users.xls},
+}
+
+@Article{gustavsen1999rational,
+  author    = {Gustavsen, Bjorn and Semlyen, Adam},
+  title     = {Rational approximation of frequency domain responses by vector fitting},
+  journal   = {IEEE Transactions on power delivery},
+  year      = {1999},
+  volume    = {14},
+  number    = {3},
+  pages     = {1052--1061},
+  publisher = {IEEE},
+}
+
+@Article{morched1983transmission,
+  author    = {Morched, AS and Brandwajn, V},
+  title     = {Transmission network equivalents for electromagnetic transients studies},
+  journal   = {IEEE transactions on power apparatus and systems},
+  year      = {1983},
+  number    = {9},
+  pages     = {2984--2994},
+  publisher = {IEEE},
+}
+
+@Article{inzunza20056,
+  author    = {Inzunza, Rub{\'e}n and Akagi, Hirofumi},
+  title     = {A 6.6-kV transformerless shunt hybrid active filter for installation on a power distribution system},
+  journal   = {IEEE Transactions on power electronics},
+  year      = {2005},
+  volume    = {20},
+  number    = {4},
+  pages     = {893--900},
+  publisher = {IEEE},
+}
+
+@Misc{6093926,
+  author   = {{IEEE Std C62.22-2009}},
+  title    = {IEEE Guide for the Application of Metal-Oxide Surge Arresters for Alternating-Current Systems},
+  month    = {July},
+  year     = {2009},
+  keywords = {Arresters;IEEE standards;Lightning;Power distribution;Power transmission lines;Substations;Surge protection;C62.22-2009;distribution lines;insulation coordination;lightning;metal-oxide surge arrester;overvoltage;substations;surge arrester;switching surges;transmission lines},
+  pages    = {1-142},
+}
+
+@Book{bobrow1997elementary,
+  title     = {Elementary linear circuit analysis},
+  publisher = {Oxford Univ. Press},
+  year      = {1997},
+  author    = {Bobrow, Leonard S},
+}
+
+@Comment{jabref-meta: databaseType:bibtex;}
