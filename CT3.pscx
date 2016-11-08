@@ -21,7 +21,7 @@
     <param name="Warn" value="0" />
     <param name="Check" value="0" />
     <param name="description" value="" />
-    <param name="revisor" value="habdullah, 1477872548" />
+    <param name="revisor" value="habdullah, 1478055263" />
   </paramlist>
   <paramlist name="Libs" />
   <hierarchy>
@@ -31,7 +31,7 @@
   </hierarchy>
   <Layers />
   <definitions>
-    <Definition classid="StationDefn" name="Station" id="389030434" group="" url="" version="" build="" crc="24544525" view="false" date="1477871590">
+    <Definition classid="StationDefn" name="Station" id="389030434" group="" url="" version="" build="" crc="24544525" view="false" date="1478055256">
       <paramlist name="">
         <param name="Description" value="" />
       </paramlist>
@@ -74,7 +74,7 @@
         </Wire>
       </schematic>
     </Definition>
-    <Definition classid="UserCmpDefn" name="Main" id="1766639011" group="" url="" version="" build="" crc="56163957" view="false" date="1477871590">
+    <Definition classid="UserCmpDefn" name="Main" id="1766639011" group="" url="" version="" build="" crc="55786408" view="false" date="1478055256">
       <paramlist name="">
         <param name="Description" value="" />
       </paramlist>
@@ -967,10 +967,10 @@
           <vertex x="0" y="0" />
           <vertex x="0" y="-18" />
         </Wire>
-        <User classid="UserCmp" defn="master:phasorimp" id="1580038261" x="54" y="702" w="96" h="96" z="1" orient="0" link="-1" q="4">
+        <User classid="UserCmp" defn="master:phasorimp" id="1580038261" x="54" y="702" w="92" h="96" z="1" orient="0" link="-1" q="4">
           <paramlist link="-1" name="">
             <param name="Fmin" value="50 [Hz]" />
-            <param name="Fmax" value="20000 [Hz]" />
+            <param name="Fmax" value="4000 [Hz]" />
             <param name="FType" value="0" />
             <param name="Finc" value="10 [Hz]" />
             <param name="NumF" value="1000" />

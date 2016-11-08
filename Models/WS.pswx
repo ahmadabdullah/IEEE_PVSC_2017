@@ -1,0 +1,32 @@
+<workspace name="WS" version="4.6.0" crc="42742720">
+  <paramlist name="options">
+    <param name="compile_save_enable" value="false" />
+    <param name="autosave_interval" value="0" />
+    <param name="display_project_file_name" value="false" />
+    <param name="type_conversion_warn" value="1" />
+    <param name="private_env" value="true" />
+    <param name="unit_system_warn" value="1" />
+    <param name="case_sensitivity" value="true" />
+    <param name="ss_limit" value="256" />
+    <param name="MaxRadioCount" value="256" />
+    <param name="cim_compatibility" value="true" />
+    <param name="MaxConcurrentSim" value="32" />
+    <param name="SocketPortBase" value="30000" />
+    <param name="memory_notify" value="256" />
+    <param name="output_empty" value="1" />
+    <param name="output_excess" value="1" />
+    <param name="output_density" value="1" />
+    <param name="waveform_overwrite" value="1" />
+    <param name="snapshot_overwrite" value="1" />
+    <param name="duplicate_messages" value="100" />
+    <param name="runtime_canvas_lock" value="0" />
+  </paramlist>
+  <projects>
+    <project type="project" name="B2_full" filepath=".\B2_full.pscx" />
+    <project type="project" name="B2" filepath=".\B2.pscx" />
+    <project type="library" name="ETRAN" filepath="..\..\..\Documents\PSCAD\PSCAD Libraries\ETRAN.pslx" />
+    <project type="project" name="D1" filepath=".\D1.pscx" />
+    <project type="project" name="D1_v2" filepath="..\..\..\Downloads\TOV Simulations\Full Order Model TOV Scenarios_2\Full Order Model TOV Scenarios_2\B4\D1_v2.pscx" />
+  </projects>
+  <simulations />
+</workspace>

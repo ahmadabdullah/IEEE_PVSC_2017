@@ -1,0 +1,17 @@
+*.out
+*.inf
+*.dat
+*.f
+*.infx
+*.obj
+*.map
+*.make
+*.bat
+*.dta
+*.bakx
+*.lib
+*.mak
+*.exe
+*.psmx
+*.pscx
+*.pdf
