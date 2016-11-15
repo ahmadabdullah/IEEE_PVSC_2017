@@ -88,18 +88,13 @@
 \html_css_as_file 0
 \html_be_strict false
 \author -1662754672 "byancey"
+\author 858620234 "habdullah"
 \end_header
 
 \begin_body
 
 \begin_layout Title
-A Reduced Order Model for a TOV Study in a Solar PV 
-\change_inserted -1662754672 1479174133
-Project
-\change_deleted -1662754672 1479174135
-Farm
-\change_unchanged
-
+A Reduced Order Model for a TOV Study in a Solar PV Project
 \end_layout
 
 \begin_layout Author
@@ -184,66 +179,24 @@ e-mail: byancey@epeconsulting.com
 
 \begin_layout Abstract
 Special system studies are needed to assess the different preliminary designs
- of solar photovoltaic (PV) 
-\change_deleted -1662754672 1479174146
-farms
-\change_inserted -1662754672 1479174148
-projects
-\change_unchanged
-.
- One of these 
-\change_deleted -1662754672 1479174162
-studies 
-\change_unchanged
-is
-\change_inserted -1662754672 1479174167
- a
-\change_unchanged
- Temporary Overvoltage (TOV) study.
- The main purpose of a TOV study is 
-\change_inserted -1662754672 1479174176
-to 
-\change_unchanged
-evaluat
-\change_inserted -1662754672 1479174179
-e
-\change_deleted -1662754672 1479174179
-ing
-\change_unchanged
- the capability of the surge arresters (SAs) within the substation.
- To assess the capability of the 
-\change_deleted -1662754672 1479174632
-surge arrester
-\change_inserted -1662754672 1479174633
-SA
-\change_unchanged
-s accurately, a detailed electromagnetic transient (EMT) model of the project
- has to be built.
+ of solar photovoltaic (PV) projects.
+ One of these is a Temporary Overvoltage (TOV) study.
+ The main purpose of a TOV study is to evaluate the capability of the surge
+ arresters (SAs) within the substation.
+ To assess the capability of the SAs accurately, a detailed electromagnetic
+ transient (EMT) model of the project has to be built.
  With the detailed EMT model, which has a large number of inverters, the
  run time of the model becomes prohibitive even for a single scenario.
  In this paper, we propose a method to systematically reduce the order of
  the EMT model at the substation level thus making the model suitable for
  TOV studies.
  The response of the reduced order model is then benchmarked against the
- response of the full order model of an 80 MW solar PV 
-\change_deleted -1662754672 1479174270
-farm
-\change_inserted -1662754672 1479174271
-project
-\change_unchanged
- for various TOV scenarios.
+ response of the full order model of an 80 MW solar PV project for various
+ TOV scenarios.
  Simulation results show satisfactory agreement between the response of
- the detailed model and the response of 
-\change_inserted -1662754672 1479174393
-the 
-\change_unchanged
-reduced order model.
- Additionally, the run time of the proposed reduced 
-\change_inserted -1662754672 1479174400
-order 
-\change_unchanged
-model is less than the run time of the full order model by a factor of ninety
- six.
+ the detailed model and the response of the reduced order model.
+ Additionally, the run time of the proposed reduced order model is less
+ than the run time of the full order model by a factor of ninety six.
  
 \end_layout
 
@@ -263,16 +216,9 @@ With the increased penetration of renewable energy into the grid, special
  system studies are called upon to assess their impact on various aspects
  of the power system.
  One of these aspects is evaluating the adequacy the of surge arresters
-\change_inserted -1662754672 1479174662
- (SAs)
-\change_unchanged
  within the substation.
  Surge arrester MCOV and energy handling capability are generally selected
- on an ad hoc manner in 
-\change_inserted -1662754672 1479174680
-the 
-\change_unchanged
-early design stage.
+ on an ad hoc manner in the early design stage.
  Assessment of the adequacy of the SAs in the substation ensures that SAs
  can ride through the TOV by absorbing an amount of energy that is within
  their energy handling capability and that the TOV level is limited to a
@@ -296,13 +242,7 @@ key "IEEEStd1312.1-19961996"
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -1662754672 1479174772
-This
-\change_deleted -1662754672 1479174773
-It
-\change_unchanged
- can occur when the PV inverter is suddenly disconnected from the grid.
+This can occur when the PV inverter is suddenly disconnected from the grid.
  Because inverters act as a constant current source, hence when a circuit
  breaker opens the inverter terminal voltage can cause voltage fluctuations.
  When this occurs, inverters quickly shut down, but there can be a short
@@ -321,13 +261,8 @@ Historically, assessment of SAs had been done under specific assumptions
 \end_inset
 
 .
- This value can be used along with the surge arrester 
-\change_deleted -1662754672 1479174837
-temporary overvoltage
-\change_inserted -1662754672 1479174837
-TOV
-\change_unchanged
- withstand capability curve 
+ This value can be used along with the surge arrester TOV withstand capability
+ curve 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "6093926"
@@ -335,18 +270,11 @@ key "6093926"
 \end_inset
 
  to judge the adequacy of the SA.
- However
-\change_inserted -1662754672 1479174850
-,
-\change_unchanged
- due to the nature of the technology used in renewable energy resources,
- this might not be true.
+ However, due to the nature of the technology used in renewable energy resources
+, this might not be true.
  Renewable energy resources are generally inverter based generation.
- These inverter
-\change_inserted -1662754672 1479174864
-s
-\change_unchanged
- incorporate a large number of switches and are of various topologies.
+ These inverters incorporate a large number of switches and are of various
+ topologies.
  The temporary overvoltage withstand capability is usable for TOVs lasting
  at least 10 milliseconds and due to the microprocessor controller used
  within these inverters, most TOV events are transient in nature and the
@@ -362,21 +290,8 @@ s
 This necessitates a paradigm shift in performing TOV studies.
  Building the renewable energy project in an EMT type software becomes a
  must to assess the performance of SAs under various scenarios.
- The model must 
-\change_inserted -1662754672 1479174976
-include
-\change_deleted -1662754672 1479174974
-have
-\change_unchanged
- all inverters as well as all SAs characteristics 
-\change_inserted -1662754672 1479174987
-in order to 
-\change_unchanged
-accurately
-\change_inserted -1662754672 1479174994
- represent the project
-\change_unchanged
-.
+ The model must include all inverters as well as all SAs characteristics
+ in order to accurately represent the project.
  Running such models in EMT software requires small solution time step and
  thus a long simulation run time.
  Moreover, performing many TOV scenarios becomes a daunting task due to
@@ -525,12 +440,8 @@ reference "fig:Full-Order-EMT-Model"
 
 \end_inset
 
- has a
-\change_deleted -1662754672 1479175303
-n
-\change_unchanged
- DC to AC stage, an LC filter and an inverter step up transformer (ISU)
- transformer.
+ has a DC to AC stage, an LC filter and an inverter step up transformer
+ (ISU) transformer.
  Each ISU transformer is rated at 1.85 MVA and connected in delta-star with
  the star connected to the low voltage side of the inverter and ungrounded.
  The low voltage is 0.42 kV while the medium voltage is 34.5 kV.
@@ -551,7 +462,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename ../../../AppData/Local/Temp/Temp1_TOV Paper.zip/TOV Paper/graphics/Project.tif
+	filename graphics/Project.tif
 	scale 45
 
 \end_inset
@@ -575,10 +486,6 @@ name "fig:Full-Order-EMT-Model"
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
@@ -590,7 +497,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename ../../../AppData/Local/Temp/Temp1_TOV Paper.zip/TOV Paper/graphics/Inverer.tif
+	filename graphics/Inverer.tif
 
 \end_inset
 
@@ -616,10 +523,6 @@ name "fig:Schematic-of-the"
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
@@ -636,20 +539,9 @@ reference "fig:Full-Order-EMT-Model"
 
 .
  All surge arresters at the medium voltage level are MOV type, have the
- same MCOV of 24.4 k
-\change_inserted -1662754672 1479175377
-V
-\change_deleted -1662754672 1479175378
-v
-\change_unchanged
- and have the same energy handling capability of 219 kJ.
- The V-I characteristics of the 
-\change_deleted -1662754672 1479175397
-surge arrester
-\change_inserted -1662754672 1479175397
-SA
-\change_unchanged
-s are obtained from 
+ same MCOV of 24.4 kV and have the same energy handling capability of 219
+ kJ.
+ The V-I characteristics of the SAs are obtained from 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "jonathanwoodworth2014"
@@ -673,7 +565,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename ../../../AppData/Local/Temp/Temp1_TOV Paper.zip/TOV Paper/graphics/SA 24 kv.png
+	filename graphics/SA 24 kv.png
 	scale 50
 
 \end_inset
@@ -697,33 +589,10 @@ name "fig:Voltage-Current-(V-I)-Characteri"
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
-The project connects to the 
-\change_inserted -1662754672 1479175429
-Point of Interconnection (
-\change_unchanged
-POI
-\change_inserted -1662754672 1479175430
-)
-\change_unchanged
- at 138 kV thorough 
-\change_inserted -1662754672 1479175442
-the
-\change_deleted -1662754672 1479175441
-a
-\change_unchanged
- 
-\change_deleted -1662754672 1479175446
-main power transformer
-\change_inserted -1662754672 1479175447
-MPT
-\change_unchanged
- which has a rating of 89 MVA.
+The project connects to the Point of Interconnection (POI) at 138 kV thorough
+ the MPT which has a rating of 89 MVA.
  The feeder circuit breakers are EMA type breakers 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -812,7 +681,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename ../../../AppData/Local/Temp/Temp1_TOV Paper.zip/TOV Paper/graphics/load rejection.PNG
+	filename graphics/load rejection.PNG
 	scale 40
 
 \end_inset
@@ -836,10 +705,6 @@ name "fig:Load-reject-test"
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
@@ -851,7 +716,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename ../../../AppData/Local/Temp/Temp1_TOV Paper.zip/TOV Paper/graphics/Ab-B fsault.PNG
+	filename graphics/Ab-B fsault.PNG
 	scale 45
 
 \end_inset
@@ -872,10 +737,6 @@ name "fig:Phase-A-to"
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -1021,25 +882,15 @@ It is necessary that the parallel impedance represents the high frequency
  The parallel impedance is nothing other than a frequency dependent impedance
  that captures the high frequency response of the cable sections in collector
  feeder.
- Thus the cable sections along the feeder ha
-\change_inserted -1662754672 1479175808
-ve
-\change_deleted -1662754672 1479175808
-s
-\change_unchanged
- to be modeled by a suitable frequency dependent model.
+ Thus the cable sections along the feeder have to be modeled by a suitable
+ frequency dependent model.
  The user has two choices:
 \end_layout
 
 \begin_layout Enumerate
-
-\change_deleted -1662754672 1479175829
-Either do
-\change_inserted -1662754672 1479175829
-Perform
-\change_unchanged
- a frequency scan on the feeder with all inverters removed from the project
- (ISU transformers have to be open-circuited as well as the feeder breaker).
+Perform a frequency scan on the feeder with all inverters removed from the
+ project (ISU transformers have to be open-circuited as well as the feeder
+ breaker).
  Using that frequency scan, the user can use vector fitting 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -1063,16 +914,9 @@ Keep the feeder intact without performing a vector fitting.
 
 \begin_layout Standard
 Theoretically, both methods should represent the same impedance.
- The first choice above can be done very quickly in PSCAD
-\change_inserted -1662754672 1479175933
-™
-\change_unchanged
-/EMTDC.
- However, PSCAD
-\change_inserted -1662754672 1479175942
-™
-\change_unchanged
-/EMTDC does not enforce passivity on the resulting frequency dependent model.
+ The first choice above can be done very quickly in PSCAD™/EMTDC.
+ However, PSCAD™/EMTDC does not enforce passivity on the resulting frequency
+ dependent model.
  Due to that, the authors used the second choice and they will treat the
  first method in a separate publication.
 \end_layout
@@ -1100,7 +944,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename ../../../AppData/Local/Temp/Temp1_TOV Paper.zip/TOV Paper/graphics/Project_eqlent.tif
+	filename graphics/Project_eqlent.tif
 	scale 50
 
 \end_inset
@@ -1149,20 +993,8 @@ A total of 52 cases (8 cases per feeder) have been used to benchmark the
 \end_layout
 
 \begin_layout Standard
-Since we are only interested 
-\change_inserted -1662754672 1479176044
-in the
-\change_deleted -1662754672 1479176042
-at
-\change_unchanged
- SA evaluation, the voltage waveform has been monitored at the terminal
- of each 
-\change_deleted -1662754672 1479176053
-surge arrester
-\change_inserted -1662754672 1479176053
-SA
-\change_unchanged
-.
+Since we are only interested in the SA evaluation, the voltage waveform
+ has been monitored at the terminal of each SA.
  Current waveforms will be reported upon in a different publication.
  Circuit breakers are given close/open signal at around t=0.15 seconds.
  
@@ -1179,14 +1011,8 @@ ion of the parallel frequency dependent impedance.
 \end_layout
 
 \begin_layout Standard
-
-\change_deleted -1662754672 1479176124
-In
-\change_inserted -1662754672 1479176125
-For the
-\change_unchanged
- load rejection cases, the feeder was initially energized and then the circuit
- breaker was abruptly opened.
+For the load rejection cases, the feeder was initially energized and then
+ the circuit breaker was abruptly opened.
  Load rejection cases are the most important ones as evident from the tests
  supplied by the manufacturer in 
 \begin_inset CommandInset ref
@@ -1941,43 +1767,36 @@ name "sec:Results"
 \end_layout
 
 \begin_layout Standard
-
-\change_deleted -1662754672 1479176206
-Due to paper length requirement, we will not be reporting on all of the
+Due to paper length requirement, 
+\change_deleted 858620234 1479178914
+we will not be reporting on all of the
+\change_inserted 858620234 1479178916
+only 
+\change_deleted 858620234 1479178917
+T
+\change_inserted 858620234 1479178917
+t
 \change_inserted -1662754672 1479176230
-The key
+he key
 \change_unchanged
  
 \change_inserted -1662754672 1479176281
 scenario 
 \change_unchanged
-results of the benchmark cases 
-\change_deleted -1662754672 1479176217
-but we will
-\change_unchanged
+results of the benchmark cases
+\change_deleted 858620234 1479178934
  
-\change_inserted -1662754672 1479176261
-are discussed as part of this study.
- 
-\change_deleted -1662754672 1479176265
-report on a selected number of scenarios
 \change_unchanged
-.
- Specifically, scenarios B2, C1, C2, and D1 we will be 
-\change_deleted -1662754672 1479176294
-reporting upon
-\change_inserted -1662754672 1479176298
-discussed in futher detail
+ are discussed as part of this study.
+ Specifically, scenarios B2, C1, C2, and D1 we will be discussed in 
+\change_deleted 858620234 1479178979
+futher
+\change_inserted 858620234 1479178979
+further
 \change_unchanged
-.
+ detail.
  The voltage at the MV bus is measured and compared.
- It should be 
-\change_deleted -1662754672 1479176312
-reminded
-\change_inserted -1662754672 1479176312
-noted
-\change_unchanged
- that any switching operation happens around t=0.15 seconds.
+ It should be noted that any switching operation happens around t=0.15 seconds.
  In all the figures below, the waveforms with dashed lines represent the
  reduced order model while waveforms with the continuous lines represent
  the full order model.
@@ -1985,33 +1804,17 @@ noted
 \end_layout
 
 \begin_layout Standard
-
-\change_deleted -1662754672 1479176454
-Obviously f
-\change_inserted -1662754672 1479176455
-F
-\change_unchanged
-or Case A scenarios in 
+For Case A scenarios in 
 \begin_inset CommandInset ref
 LatexCommand formatted
 reference "tab:Benchmark-cases"
 
 \end_inset
 
-, the response of the reduced order model 
-\change_deleted -1662754672 1479176344
-has been
-\change_inserted -1662754672 1479176344
-is
-\change_unchanged
- identical to the response of the full order model.
- This because in the reduced order model, the feeder ha
-\change_inserted -1662754672 1479176470
-s
-\change_deleted -1662754672 1479176469
-d
-\change_unchanged
- been left intact as mentioned in 
+, the response of the reduced order model is identical to the response of
+ the full order model.
+ This because in the reduced order model, the feeder has been left intact
+ as mentioned in 
 \begin_inset CommandInset ref
 LatexCommand formatted
 reference "sec:The-impedance-in-paralel"
@@ -2020,37 +1823,20 @@ reference "sec:The-impedance-in-paralel"
 
  and energization occurs with the inverters offline, i.e., the inverter response
  is not part of the overall response and the voltage transients obtained
-\change_inserted -1662754672 1479176486
- and
-\change_unchanged
- are due to the response of the feeders only.
+ and are due to the response of the feeders only.
  
 \end_layout
 
 \begin_layout Standard
 For Case B scenarios, it is noted that the voltage waveforms of the reduced
- order model have more oscillations tha
-\change_inserted -1662754672 1479176508
-n
-\change_deleted -1662754672 1479176508
-t
-\change_unchanged
- the detailed EMT model.
- This is due to the fact that when the inverters are dist
-\change_inserted -1662754672 1479176560
-ributed
-\change_deleted -1662754672 1479176562
-urbed
-\change_unchanged
- across the feeder, cable sections of the feeder act as a filter that suppresses
+ order model have more oscillations than the detailed EMT model.
+ This is due to the fact that when the inverters are distributed across
+ the feeder, cable sections of the feeder act as a filter that suppresses
  unwanted harmonics.
  However, in the reduced order model, only one cable section exists before
  the measuring point.
- Even though, we increased the inverter filter size, we do not get 
-\change_inserted -1662754672 1479176584
-an 
-\change_unchanged
-exact replica of the voltage waveform of the detailed system model.
+ Even though, we increased the inverter filter size, we do not get an exact
+ replica of the voltage waveform of the detailed system model.
  The response of the reduced order model as well as the detailed model is
  shown in 
 \begin_inset CommandInset ref
@@ -2091,13 +1877,7 @@ reference "fig:C1"
 \end_layout
 
 \begin_layout Standard
-For Case D scenarios, the observations from 
-\change_deleted -1662754672 1479176656
-c
-\change_inserted -1662754672 1479176657
-C
-\change_unchanged
-ase A scenarios still hold.
+For Case D scenarios, the observations from Case A scenarios still hold.
  The response of the reduced order model as well as the detailed model is
  shown in 
 \begin_inset CommandInset ref
@@ -2111,35 +1891,13 @@ reference "fig:D1"
 \end_layout
 
 \begin_layout Standard
-All cases in this section has been focused on the response of 
-\change_deleted -1662754672 1479176674
-f
-\change_inserted -1662754672 1479176674
-F
-\change_unchanged
-eeder 1.
- However
-\change_inserted -1662754672 1479176677
-,
-\change_unchanged
- all other feeders exhibit the same response as 
-\change_deleted -1662754672 1479176681
-f
-\change_inserted -1662754672 1479176681
-F
-\change_unchanged
-eeder 1.
+All cases in this section has been focused on the response of Feeder 1.
+ However, all other feeders exhibit the same response as Feeder 1.
  In all scenarios, the run time of the full order model is 8 hours per scenario
  on a workstation having 6 cores at a clock speed of 3.2 GHz and 32 GB of
  RAM.
  For the reduced order model, the simulation run time does not exceed 6
- minutes 
-\change_inserted -1662754672 1479176697
-for
-\change_deleted -1662754672 1479176696
-in
-\change_unchanged
- any scenario.
+ minutes for any scenario.
  
 \begin_inset Float figure
 wide false
@@ -2149,7 +1907,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename ../../../AppData/Local/Temp/Temp1_TOV Paper.zip/TOV Paper/graphics/B1_All.PNG
+	filename graphics/B1_All.PNG
 	scale 20
 
 \end_inset
@@ -2173,10 +1931,6 @@ name "fig:b2"
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
@@ -2187,7 +1941,7 @@ status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename ../../../AppData/Local/Temp/Temp1_TOV Paper.zip/TOV Paper/graphics/C1_All.PNG
+	filename graphics/C1_All.PNG
 	scale 20
 
 \end_inset
@@ -2211,10 +1965,6 @@ name "fig:C1"
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
@@ -2225,7 +1975,7 @@ status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename ../../../AppData/Local/Temp/Temp1_TOV Paper.zip/TOV Paper/graphics/C2_All.PNG
+	filename graphics/C2_All.PNG
 	scale 20
 
 \end_inset
@@ -2249,10 +1999,6 @@ name "fig:C2"
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
@@ -2263,7 +2009,7 @@ status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename ../../../AppData/Local/Temp/Temp1_TOV Paper.zip/TOV Paper/graphics/D1.PNG
+	filename graphics/D1.PNG
 	scale 20
 
 \end_inset
@@ -2287,10 +2033,6 @@ name "fig:D1"
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
@@ -2308,12 +2050,7 @@ name "sec:Conclusions"
 \end_layout
 
 \begin_layout Standard
-In this paper a systematic way of reducing the order of solar PV 
-\change_inserted -1662754672 1479176709
-project
-\change_deleted -1662754672 1479176708
-farms
-\change_unchanged
+In this paper a systematic way of reducing the order of solar PV project
  at the substation level has been presented.
  The method is shown to capture the response of the collector system under
  various TOV scenarios to a satisfactory accuracy.
@@ -2326,21 +2063,9 @@ farms
 
 \begin_layout Standard
 The analysis in this paper is only limited to the SAs in the substation.
- If the feeder ha
-\change_inserted -1662754672 1479176734
-s
-\change_deleted -1662754672 1479176734
-ve
-\change_unchanged
- SAs at the ends of the collector system- as usually the case- the method
- here will not be applicable but another method needs to be used to evaluate
- those SAs and will be 
-\change_inserted -1662754672 1479176799
-analyzed in future research
-\change_deleted -1662754672 1479176802
-treated in a future publication
-\change_unchanged
-.
+ If the feeder has SAs at the ends of the collector system- as usually the
+ case- the method here will not be applicable but another method needs to
+ be used to evaluate those SAs and will be analyzed in future research.
  Theoretically speaking the SAs in the substation are the ones that are
  under the most severe duty, and if those arresters can be shown to withstand
  various TOVs, then all other SAs in the project should be safe as well
