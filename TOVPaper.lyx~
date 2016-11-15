@@ -183,13 +183,14 @@ Special system studies are needed to assess the different preliminary designs
  arresters (SAs) within the substation.
  To assess the capability of the surge arresters accurately, a detailed
  electromagnetic transient (EMT) model of the project has to be built.
- With the detailed EMT model that has a large number of inverters , the
+ With the detailed EMT model, which has a large number of inverters, the
  run time of the model becomes prohibitive even for a single scenario.
  In this paper, we propose a method to systematically reduce the order of
  the EMT model at the substation level thus making the model suitable for
  TOV studies.
- The reduced order model response is then benchmarked against the response
- of full order model of an 80 MW solar PV farm for various TOV scenarios.
+ The response of the reduced order model is then benchmarked against the
+ response of the full order model of an 80 MW solar PV farm for various
+ TOV scenarios.
  Simulation results show satisfactory agreement between the response of
  the detailed model and the response of reduced order model.
  Additionally, the run time of the proposed reduced model is less than the
