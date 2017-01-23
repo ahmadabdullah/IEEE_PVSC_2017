@@ -67,7 +67,7 @@
 \paperorientation portrait
 \suppress_date false
 \justification true
-\use_refstyle 0
+\use_refstyle 1
 \index Index
 \shortcut idx
 \color #008000
@@ -102,25 +102,7 @@ Ahmad
 \begin_inset space ~
 \end_inset
 
-Abdullah
-\begin_inset script superscript
-
-\begin_layout Plain Layout
-1
-\end_layout
-
-\end_inset
-
-, and Billy Yancey
-\begin_inset script superscript
-
-\begin_layout Plain Layout
-2
-\end_layout
-
-\end_inset
-
-
+Abdullah, and Billy Yancey
 \end_layout
 
 \end_inset
@@ -145,52 +127,6 @@ status collapsed
 status collapsed
 
 \begin_layout Plain Layout
-\begin_inset script superscript
-
-\begin_layout Plain Layout
-1
-\end_layout
-
-\end_inset
-
-Department of Electrical Power and Machines, Faculty of Engineering, Cairo
- University, Cairo, Egypt 12613 
-\begin_inset Newline newline
-\end_inset
-
- and Electric Power Engineers, Inc, 13001 HWY 71 G100, Austin, Texas 78738
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-
-\backslash
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset Flex Author Affiliation
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset script superscript
-
-\begin_layout Plain Layout
-2
-\end_layout
-
-\end_inset
-
 Electric Power Engineers, Inc, 13001 HWY 71 G100, Austin, Texas 78738
 \end_layout
 
@@ -272,12 +208,10 @@ Historically, assessment of SAs had been done under specific assumptions
 , this might not be true.
  The temporary overvoltage withstand capability is usable for TOVs lasting
  at least 10 milliseconds and due to the microprocessor controller used
- within these inverters, most TOV events are transient in nature and the
- duration of the TOV events in most cases do not exceed milliseconds.
+ within these inverters, most TOV events are transient in nature that do
+ not exceed milliseconds.
  Thus, the SA overvoltage withstand capability curve is of no practical
  usefulness in case of TOV events due to inverter based technologies.
- Hence, it is not always possible to assess the capability of a SA using
- the project configuration, grounding scheme and the TOV withstand capability.
  
 \end_layout
 
@@ -288,8 +222,7 @@ Building the renewable energy project in an EMT type software becomes a
  in order to accurately represent the project.
  Running such models in EMT software requires small solution time step and
  thus a long simulation run time.
- Moreover, performing many TOV scenarios becomes a daunting task due to
- the long simulation run time.
+ Moreover, performing many TOV scenarios becomes a daunting task.
  Thus, it is of utmost importance to develop a method to reduce the total
  number of switches (inverters) in the model to reduce the simulation run
  time.
@@ -425,28 +358,11 @@ reference "fig:Full-Order-EMT-Model"
 \end_inset
 
 .
- The project has a total of 45 inverters and each one is capable of producing
- 1.8 MVA.
- Each inverter block in 
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "fig:Full-Order-EMT-Model"
-
-\end_inset
-
- has a DC to AC stage, an LC filter and an inverter step up transformer
- (ISU) transformer.
+ Each inverter is capable of producing 1.8 MVA and consists of a DC to AC
+ stage, an LC filter and an inverter step up transformer (ISU) transformer.
  Each ISU transformer is rated at 1.85 MVA and connected in delta-star with
  the star connected to the low voltage side of the inverter and ungrounded.
  The low voltage is 0.42 kV while the medium voltage is 34.5 kV.
- A schematic of the inverter is shown in 
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "fig:Schematic-of-the"
-
-\end_inset
-
-.
  
 \begin_inset Float figure
 wide false
@@ -469,43 +385,6 @@ Full Order EMT model
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Full-Order-EMT-Model"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename graphics/Inverer.tif
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Schematic of the inverter in the project 
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:Schematic-of-the"
 
 \end_inset
 
@@ -543,8 +422,8 @@ key "jonathanwoodworth2014"
 \end_inset
 
 .
- The project connects to the Point of Interconnection (POI) at 138 kV thorough
- the MPT which has a rating of 89 MVA.
+ The project connects to the POI at 138 kV thorough the MPT rated at 89
+ MVA.
  
 \end_layout
 
@@ -581,8 +460,6 @@ reference "sec:Scenarios"
  The inverter manufacturer supplied two benchmark tests.
  The first one is a load rejection test and the second one is a line to
  line fault.
- The fault is performed at the inverter terminals with the ISU transformer
- terminals connected to a infinite bus.
  Manufacturer's supplied tests will be shown in the full paper that shows
  that the load rejection test produces the worst TOV as opposed to conventional
  power systems where generally the single line to ground fault causes the
@@ -603,21 +480,12 @@ name "sec:Methodology"
 
 \begin_layout Standard
 Just as any electrical source can be represent by its Thevenin's or Norton's
- equivalent 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "watson2003power,bobrow1997elementary"
-
-\end_inset
-
-, the inverters within the solar PV project can be modeled as such depending
- on the technology used within the inverter.
+ equivalent, the inverters within the solar PV project can be modeled as
+ such depending on the technology used within the inverter.
  However, most manufacturers of solar PV inverters use a technology that
  makes the inverters act as a current source or a voltage controlled current
  source.
  Due to that, Norton's equivalent model would be most suitable.
- A Norton's equivalent consists of two parts: the Norton's current source
- and the impedance in parallel with it.
  
 \end_layout
 
@@ -663,14 +531,8 @@ The pseudo-Norton's source will consist of an inverter stage with its associated
  controls, a filter as well a transformer.
  Generally speaking, any inverter must contain a filter to shape the output
  waveforms by rejecting the high frequency switching harmonics.
- Inverter manufacturers can use transformerless 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "inzunza20056"
-
-\end_inset
-
- technology, but this is outside the scope of this paper.
+ Inverter manufacturers can use transformerless technology, but this is
+ outside the scope of this paper.
  
 \end_layout
 
@@ -687,11 +549,7 @@ To construct the pseudo-Norton's source, the inverter MVA rating must be
  Lastly, the ISU transformer MVA rating is also to be scaled up by a factor
  equal to the number of inverters without changing the per unit impedance
  of the ISU transformer.
- 
-\end_layout
-
-\begin_layout Standard
-In this paper, we used a confidential model supplied by the manufacturer
+ In this paper, we used a confidential model supplied by the manufacturer
  and scaled the model as described in this section.
  
 \end_layout
@@ -708,9 +566,7 @@ name "sec:The-impedance-in-paralel"
 \end_layout
 
 \begin_layout Standard
-It is necessary that the parallel impedance represents the high frequency
- response of the collector system.
- The parallel impedance is nothing other than a frequency dependent impedance
+The parallel impedance is nothing other than a frequency dependent impedance
  that captures the high frequency response of the cable sections in collector
  feeder.
  Thus the cable sections along the feeder have to be modeled by a suitable
@@ -722,14 +578,6 @@ It is necessary that the parallel impedance represents the high frequency
 Perform a frequency scan on the feeder with all inverters removed from the
  project (ISU transformers have to be open-circuited as well as the feeder
  breaker).
- Using that frequency scan, the user can use vector fitting 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "gustavsen1999rational,morched1983transmission"
-
-\end_inset
-
- to construct a frequency dependent model.
  Passivity has to be enforced upon the resulting fitting by insuring that
  negative resistance is not a result of the fitting.
  Negative resistance causes instability in the EMT simulations.
@@ -737,7 +585,7 @@ key "gustavsen1999rational,morched1983transmission"
 \end_layout
 
 \begin_layout Enumerate
-Keep the feeder intact without performing a vector fitting.
+Keep the feeder intact without performing fitting.
  This means that the cable sections are to be kept in the model but without
  the inverters, LC filters or the ISU transformers.
  
@@ -746,8 +594,7 @@ Keep the feeder intact without performing a vector fitting.
 \begin_layout Standard
 Theoretically, both methods should represent the same impedance.
  The first choice above can be done very quickly in PSCAD™/EMTDC.
- However, PSCAD™/EMTDC does not enforce passivity on the resulting frequency
- dependent model.
+ However, PSCAD™/EMTDC does not enforce passivity.
  Due to that, the authors used the second choice and they will treat the
  first method in a separate publication.
 \end_layout
@@ -756,7 +603,7 @@ Theoretically, both methods should represent the same impedance.
 The authors also noted that for the equivalencing to produce satisfactory
  results, the first cable section in feeder have to be left out from this
  equivalencing process.
- 
+ The overall reduced order model is shown in 
 \begin_inset CommandInset ref
 LatexCommand formatted
 reference "fig:Reduced-Order-Model"
@@ -834,8 +681,8 @@ The feeder energization cases are designed to test the validity of the construct
 ion of the parallel frequency dependent impedance.
  In these cases all inverters were offline and the feeder was initially
  de-energized.
- At certain time, the feeder breaker is closed and the response of both
- models are compared.
+ At the specified time, the feeder breaker is closed and the response of
+ both models are compared.
  
 \end_layout
 
@@ -876,8 +723,9 @@ name "sec:Results"
 \end_layout
 
 \begin_layout Standard
-Due to abstract length requirements, we focus on one scenario only in which
- a load rejection simulation is performed.
+Satisfactory match between the results of full order model and the reduced
+ order model were obtained.
+ All results will be shown in the full paper.
  
 \end_layout
 
@@ -893,7 +741,7 @@ name "sec:Conclusions"
 \end_layout
 
 \begin_layout Standard
-In this paper a systematic way of reducing the order of solar PV project
+In this paper, a systematic way of reducing the order of solar PV project
  at the substation level has been presented.
  The method is shown to capture the response of the collector system under
  various TOV scenarios to a satisfactory accuracy.

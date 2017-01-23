@@ -723,9 +723,8 @@ name "sec:Results"
 \end_layout
 
 \begin_layout Standard
-Satisfactory match between the results of full order model and the reduced
- order model were obtained.
- All results will be shown in the full paper.
+Due to abstract length requirements, we focus on one scenario only in which
+ a load rejection simulation is performed.
  
 \end_layout
 
