@@ -82,13 +82,11 @@
 \papercolumns 2
 \papersides 1
 \paperpagestyle default
-\tracking_changes true
+\tracking_changes false
 \output_changes false
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
-\author -1662754672 "byancey"
-\author 858620234 "habdullah"
 \end_header
 
 \begin_body
@@ -99,7 +97,7 @@ A Reduced Order Model for a TOV Study in a Solar PV Project
 
 \begin_layout Author
 \begin_inset Flex Author Name
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Ahmad
@@ -107,20 +105,50 @@ Ahmad
 \end_inset
 
 Abdullah
+\begin_inset Flex Author Mark
+status open
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+
+and Billy
+\begin_inset space ~
+\end_inset
+
+Yancey
+\begin_inset Flex Author Mark
+status open
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
 
 
 \begin_inset Flex Author Affiliation
-status collapsed
+status open
 
 \begin_layout Plain Layout
-Electric Power Engineers, Inc
-\begin_inset Newline newline
+\begin_inset Flex Author Mark
+status open
+
+\begin_layout Plain Layout
+1
+\end_layout
+
 \end_inset
 
-and the Department of Electrical Power and Machines 
+Electric Power Engineers, Inc and the Department of Electrical Power and
+ Machines 
 \begin_inset Newline newline
 \end_inset
 
@@ -128,48 +156,38 @@ Cairo University, Faculty of Engineering
 \begin_inset Newline newline
 \end_inset
 
-e-mail: ahmad.abdullah@ieee.org
-\end_layout
-
+Cairo, Egypt 12613
+\begin_inset Newline newline
 \end_inset
 
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-and 
-\end_layout
-
-\end_inset
-
-
-\begin_inset Flex Author Name
-status open
-
-\begin_layout Plain Layout
-Billy
-\begin_inset space ~
-\end_inset
-
-Yancey
+E-mail: ahmad.abdullah@ieee.org
 \end_layout
 
 \end_inset
 
 
 \begin_inset Flex Author Affiliation
-status collapsed
+status open
 
 \begin_layout Plain Layout
+\begin_inset Flex Author Mark
+status open
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+
 Electric Power Engineers, Inc
 \begin_inset Newline newline
 \end_inset
 
-e-mail: byancey@epeconsulting.com
+Austin, TX, USA 78738
+\begin_inset Newline newline
+\end_inset
+
+Email: byancey@epeconsulting.com
 \end_layout
 
 \end_inset
@@ -1746,10 +1764,6 @@ LLLG fault at 138 kV HV substation bus with both capacitor banks OFF
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
@@ -1767,33 +1781,9 @@ name "sec:Results"
 \end_layout
 
 \begin_layout Standard
-Due to paper length requirement, 
-\change_deleted 858620234 1479178914
-we will not be reporting on all of the
-\change_inserted 858620234 1479178916
-only 
-\change_deleted 858620234 1479178917
-T
-\change_inserted 858620234 1479178917
-t
-\change_inserted -1662754672 1479176230
-he key
-\change_unchanged
- 
-\change_inserted -1662754672 1479176281
-scenario 
-\change_unchanged
-results of the benchmark cases
-\change_deleted 858620234 1479178934
- 
-\change_unchanged
- are discussed as part of this study.
- Specifically, scenarios B2, C1, C2, and D1 we will be discussed in 
-\change_deleted 858620234 1479178979
-futher
-\change_inserted 858620234 1479178979
-further
-\change_unchanged
+Due to paper length requirement, only the key scenario results of the benchmark
+ cases are discussed as part of this study.
+ Specifically, scenarios B2, C1, C2, and D1 we will be discussed in further
  detail.
  The voltage at the MV bus is measured and compared.
  It should be noted that any switching operation happens around t=0.15 seconds.
