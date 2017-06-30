@@ -97,7 +97,7 @@ A Reduced Order Model for a TOV Study in a Solar PV Project
 
 \begin_layout Author
 \begin_inset Flex Author Name
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Ahmad
@@ -218,6 +218,12 @@ Special system studies are needed to assess the different preliminary designs
  
 \end_layout
 
+\begin_layout Keywords
+Solar power generation, Photovoltaic systems, Electromagnetic transients,
+ Surge arresters, Transient overvoltage, Surge protection, Temporary Overvoltage
+ 
+\end_layout
+
 \begin_layout Section
 Introduction
 \begin_inset CommandInset label
@@ -267,6 +273,57 @@ This can occur when the PV inverter is suddenly disconnected from the grid.
  period of time where some inverters can create overvoltage spikes.
  This is a concern for PV system owners and utilities since large voltage
  spikes can damage other equipment that is still connected in the vicinity.
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+author{ 
+\backslash
+IEEEauthorblockN{
+\backslash
+large Ahmad~Abdullah
+\backslash
+IEEEauthorrefmark{1}and Billy~Yancey
+\backslash
+IEEEauthorrefmark{2}} 
+\backslash
+IEEEauthorblockA{
+\backslash
+IEEEauthorrefmark{1}Electric Power Engineers, Inc and the Department of
+ Electrical Power and Machines 
+\backslash
+
+\backslash
+ Cairo University, Faculty of Engineering
+\backslash
+
+\backslash
+ Cairo, Egypt 12613
+\backslash
+
+\backslash
+ E-mail: ahmad.abdullah@ieee.org}
+\backslash
+IEEEauthorblockA{
+\backslash
+IEEEauthorrefmark{2}Electric Power Engineers, Inc
+\backslash
+
+\backslash
+ Austin, TX, USA 78738
+\backslash
+
+\backslash
+ Email: byancey@epeconsulting.com}}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard

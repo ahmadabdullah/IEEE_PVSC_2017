@@ -105,14 +105,25 @@ Ahmad
 \end_inset
 
 Abdullah
-\begin_inset ERT
+\begin_inset Flex Author Mark
 status open
 
 \begin_layout Plain Layout
+1
+\end_layout
 
+\end_inset
 
-\backslash
-IEEEauthorrefmark{1}
+and Billy
+\begin_inset space ~
+\end_inset
+
+Yancey
+\begin_inset Flex Author Mark
+status open
+
+\begin_layout Plain Layout
+2
 \end_layout
 
 \end_inset
@@ -124,26 +135,20 @@ IEEEauthorrefmark{1}
 
 
 \begin_inset Flex Author Affiliation
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Flex Author Mark
 status open
 
 \begin_layout Plain Layout
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-IEEEauthorrefmark{1}
+1
 \end_layout
 
 \end_inset
 
-Electric Power Engineers, Inc
-\begin_inset Newline newline
-\end_inset
-
-and the Department of Electrical Power and Machines 
+Electric Power Engineers, Inc and the Department of Electrical Power and
+ Machines 
 \begin_inset Newline newline
 \end_inset
 
@@ -151,64 +156,25 @@ Cairo University, Faculty of Engineering
 \begin_inset Newline newline
 \end_inset
 
-e-mail: ahmad.abdullah@ieee.org
-\end_layout
-
+Cairo, Egypt 12613
+\begin_inset Newline newline
 \end_inset
 
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-and 
-\end_layout
-
-\end_inset
-
-
-\begin_inset Flex Author Name
-status open
-
-\begin_layout Plain Layout
-Billy
-\begin_inset space ~
-\end_inset
-
-Yancey
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-IEEEauthorrefmark{2}
-\end_layout
-
-\end_inset
-
-
+E-mail: ahmad.abdullah@ieee.org
 \end_layout
 
 \end_inset
 
 
 \begin_inset Flex Author Affiliation
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Flex Author Mark
 status open
 
 \begin_layout Plain Layout
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-IEEEauthorrefmark{2}
+2
 \end_layout
 
 \end_inset
@@ -217,7 +183,11 @@ Electric Power Engineers, Inc
 \begin_inset Newline newline
 \end_inset
 
-e-mail: byancey@epeconsulting.com
+Austin, TX, USA 78738
+\begin_inset Newline newline
+\end_inset
+
+Email: byancey@epeconsulting.com
 \end_layout
 
 \end_inset
@@ -246,6 +216,11 @@ Special system studies are needed to assess the different preliminary designs
  Additionally, the run time of the proposed reduced order model is less
  than the run time of the full order model by a factor of ninety six.
  
+\end_layout
+
+\begin_layout Keywords
+Solar power generation, Photovoltaic systems, Electromagnetic transients,
+ Surge arresters, Transient overvoltage, Surge protection, Temporary Overvoltage
 \end_layout
 
 \begin_layout Section
